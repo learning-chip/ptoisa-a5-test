@@ -1,0 +1,6 @@
+tests/cpp/tadd/build/
+tests/cpp/tadd/cases/
+*.o
+*.so
+__pycache__/
+*.pyc
