@@ -1,6 +1,10 @@
-tests/cpp/tadd/build/
-tests/cpp/tadd/cases/
+tests/cpp/*/build/
+tests/cpp/*/cases/
 *.o
 *.so
 __pycache__/
 *.pyc
+
+*.bin
+*.dump
+camodel_log
