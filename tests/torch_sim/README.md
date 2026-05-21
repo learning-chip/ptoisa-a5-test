@@ -1,8 +1,8 @@
 # torch_sim — PTO A5 Smoke Tests (torch_npu + msprof)
 
-Same nine operators and **12 smoke cases** as `tests/cpp` and `tests/python_wrapper`, executed via **torch_npu** device tensors and **ctypes** kernel launches under **`msprof op simulator`** (no `-lruntime_camodel` link).
+Same nine operators and **12 smoke cases** as [cpp](../cpp/) and [python_wrapper](../python_wrapper/), executed via **torch_npu** device tensors and **ctypes** kernel launches under **`msprof op simulator`** (no `-lruntime_camodel` link).
 
-See [torch_sim_design_doc.md](torch_sim_design_doc.md) for why this is the portable real-NPU-ready path.
+See the [root README](../../README.md) for a comparison of all three paths. See [torch_sim_design_doc.md](torch_sim_design_doc.md) for why this is the portable real-NPU-ready path.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ See [torch_sim_design_doc.md](torch_sim_design_doc.md) for why this is the porta
 pip install -r requirements.txt
 ```
 
-- `third-party/pto-isa` submodule initialized (same as cpp tests)
+- `third-party/pto-isa` submodule initialized
 - `torch_npu` 2.9.x matching your CANN version
 
 ```bash
@@ -48,12 +48,6 @@ chmod +x run_smoke.sh
 ./run_smoke.sh
 ```
 
-Or aggregate pytest-style output via `run_smoke.py` (wraps direct execution, useful after `./run_direct.sh` or for debugging):
-
-```bash
-python3 run_smoke.py
-```
-
 Expected: **12 passed** (same cases as `tests/cpp/run_smoke.sh`).
 
 Run a single operator:
@@ -63,14 +57,16 @@ msprof op simulator --soc-version=Ascend950PR_9599 \
   --output=msprof_res/tadd python3 tadd/test_tadd.py
 ```
 
-## Run without msprof (real NPU / future hardware)
+Profiling output goes to `msprof_res/` (gitignored). A deduplicated archive of reference traces may be kept as `trace_archive.zip`.
+
+## Run without msprof (real NPU)
 
 ```bash
 chmod +x run_direct.sh
 ./run_direct.sh
 ```
 
-Same test scripts; no camodel link required. Use this path when Ascend950 hardware is available.
+Same test scripts, executed directly via `run_smoke.py` without the msprof wrapper. Requires real Ascend950 hardware (or an environment where torch_npu can reach a device).
 
 ## Layout
 
@@ -78,7 +74,7 @@ Same test scripts; no camodel link required. Use this path when Ascend950 hardwa
 torch_sim/
 ├── common/
 │   ├── build.py           # bisheng (no runtime_camodel)
-│   ├── torch_runtime.py   # torch_npu init, tensors, stream ptr
+│   ├── torch_runtime.py   # torch_npu helpers (init called from test __main__)
 │   ├── numeric.py
 │   ├── reporter.py
 │   ├── ctypes_utils.py
@@ -87,9 +83,9 @@ torch_sim/
 │   ├── *_kernel.cpp
 │   ├── launch_api.cpp
 │   └── test_<op>.py
-├── run_smoke.sh           # msprof per operator
-├── run_smoke.py           # aggregate PASSED/FAILED
-├── run_direct.sh          # no msprof
+├── run_smoke.sh           # msprof per operator (primary)
+├── run_smoke.py           # direct subprocess runner (real NPU / run_direct.sh)
+├── run_direct.sh
 └── torch_sim_design_doc.md
 ```
 
@@ -104,21 +100,21 @@ torch_sim/
 | tmov_acc2vec / textract / tinsert | `case_nz2nd_3` |
 | tmov_acc2mat | `case_nz2nd_4` |
 
-## Three execution paths
-
-| Path | Runtime | Link model | Best for |
-|------|---------|------------|----------|
-| `tests/cpp` | ACL C++ | `-lruntime_camodel` | Reference / bisheng flags |
-| `tests/python_wrapper` | pybind ACL + NumPy | `-lruntime_camodel` | Lightweight Python, no torch |
-| `tests/torch_sim` | torch_npu + ctypes | no camodel | Same code path as future real NPU |
-
 ## Architecture
 
 ```
-torch.zeros(..., device=npu)
+torch NPU tensors
     → torch_npu (stream, data_ptr)
     → ctypes → lib<op>.so (launch_api extern "C")
     → msprof op simulator (Ascend950PR_9599)
 ```
 
 Bisheng kernel flags match `tests/cpp/common/bisheng_build.sh`. Host link uses `-lstdc++` only — **not** `-lruntime_camodel`.
+
+Each test script calls `init_torch_npu()` once in its `if __name__ == "__main__"` block before running cases.
+
+## See also
+
+- [Root README](../../README.md) — three-path overview
+- [cpp/README.md](../cpp/README.md) — C++ reference harness
+- [python_wrapper/README.md](../python_wrapper/README.md) — NumPy + pybind path

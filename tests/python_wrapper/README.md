@@ -2,11 +2,13 @@
 
 NumPy-first smoke tests for nine PTO operators, using the **CANN camodel** (`runtime_camodel`) instead of `torch_npu` or real NPU hardware.
 
+The same **12 smoke cases** are also available via [cpp](../cpp/) and [torch_sim](../torch_sim/). See the [root README](../../README.md) for a comparison of all three paths.
+
 See [wrapper_design_doc.md](wrapper_design_doc.md) for why this approach was chosen.
 
 ## Prerequisites
 
-- CANN toolkit with `ASCEND_HOME_PATH` set (`source ${ASCEND_HOME_PATH}/bin/setenv.bash`)
+- CANN toolkit with `ASCEND_HOME_PATH` set
 - `bisheng` compiler (bundled with CANN)
 - Python 3 + dependencies:
 
@@ -14,7 +16,11 @@ See [wrapper_design_doc.md](wrapper_design_doc.md) for why this approach was cho
 pip install -r requirements.txt
 ```
 
-- `third-party/pto-isa` submodule initialized (same as cpp tests)
+- `third-party/pto-isa` submodule initialized
+
+```bash
+source ${ASCEND_HOME_PATH}/bin/setenv.bash
+```
 
 ## Build
 
@@ -45,7 +51,7 @@ source ${ASCEND_HOME_PATH}/bin/setenv.bash
 python3 run_smoke.py
 ```
 
-Each operator runs in its own process (same isolation model as separate cpp binaries). Expected: **12 passed** (same cases as `tests/cpp/run_smoke.sh`).
+Each operator runs in its own process (same isolation model as separate cpp binaries). Expected: **12 passed**.
 
 Run a single operator:
 
@@ -94,3 +100,9 @@ NumPy buffers
 ```
 
 Bisheng flags match `tests/cpp/common/bisheng_build.sh` (`dav-c310-vec` / `dav-c310`, `-DREGISTER_BASE`, `-lruntime_camodel`). **Do not** use jit_cpp `-DMEMORY_BASE` / `dav-2201` flags.
+
+## See also
+
+- [Root README](../../README.md) — three-path overview
+- [cpp/README.md](../cpp/README.md) — C++ reference harness
+- [torch_sim/README.md](../torch_sim/README.md) — torch_npu + msprof path

@@ -95,4 +95,4 @@ We use **pybind + camodel-linked runtime** for ACL device semantics, and **ctype
 
 ## Complementary path: tests/torch_sim
 
-For teams on the PyTorch Ascend stack, [`tests/torch_sim`](../torch_sim/) provides the same 12 smoke cases using **torch_npu + ctypes** without linking `-lruntime_camodel`. Execution runs under **`msprof op simulator`** (Ascend950PR_9599), which satisfies torch_npu device calls without physical hardware. See [torch_sim_design_doc.md](../torch_sim/torch_sim_design_doc.md).
+For teams on the PyTorch Ascend stack, [`tests/torch_sim`](../torch_sim/) provides the same 12 smoke cases using **torch_npu + ctypes** without linking `-lruntime_camodel`. Execution runs under **`msprof op simulator`** (Ascend950PR_9599), which satisfies torch_npu device calls without physical hardware. See [torch_sim_design_doc.md](../torch_sim/torch_sim_design_doc.md) and the [root README](../../README.md) for the three-path overview.

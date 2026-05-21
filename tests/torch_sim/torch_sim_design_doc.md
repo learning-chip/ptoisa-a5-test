@@ -55,7 +55,8 @@ Because kernels are bisheng-built with A5 flags and launched through torch_npu s
 
 ## Related docs
 
+- [Root README](../../README.md) — three-path overview
+- [tests/cpp/README.md](../cpp/README.md) — C++ reference smoke harness
 - [tests/python_wrapper/wrapper_design_doc.md](../python_wrapper/wrapper_design_doc.md) — NumPy + pybind + camodel (no torch)
-- [tests/cpp](../cpp) — reference C++ smoke harness
 
 The python_wrapper design doc explains why torch_npu alone was rejected for the lightweight path; torch_sim is the complementary approach that **does** use torch_npu, enabled by msprof.
