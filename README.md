@@ -1,6 +1,6 @@
 # Standalone PTO-ISA A5 Simulator Tests
 
-Minimal, out-of-source test harness for PTO-ISA NPU (A5) operator tests. Uses plain `bisheng` shell commands — no CMake, no Google Test.
+Minimal, out-of-source test harness for PTO-ISA NPU (A5) operator tests. Uses plain `bisheng` shell commands — no CMake, no Google Test. For most smooth experience, use [950 Dockerfile](https://github.com/learning-chip/agent_docker_npu/pull/8). No real NPU required, only runs cycle-accurate simulator on CPU host.
 
 ## Layout
 
