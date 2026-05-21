@@ -15,7 +15,7 @@ sys.path.insert(0, str(_ROOT))
 
 from common.ctypes_utils import bind_launch
 from common.numeric import assert_arrays_match
-from common.torch_runtime import data_ptr, empty_npu, init_torch_npu, npu_tensor, stream_ptr, sync, to_numpy
+from common.torch_runtime import data_ptr, empty_npu, npu_tensor, stream_ptr, sync, to_numpy
 
 np.random.seed(19)
 _LIB = ctypes.CDLL(str(Path(__file__).parent / "build" / "libtadd.so"))
@@ -32,7 +32,6 @@ def _make_add_golden(dtype, dh, dw, s0h, s0w, s1h, s1w, vr, vc):
 
 
 def case_float_64x64():
-    init_torch_npu()
     in1, in2, golden = _make_add_golden(np.float32, 64, 64, 64, 64, 64, 64, 64, 64)
     out = empty_npu(in1.shape, torch.float32)
     s0 = npu_tensor(in1)
@@ -43,7 +42,6 @@ def case_float_64x64():
 
 
 def case_int32_64x64():
-    init_torch_npu()
     in1, in2, golden = _make_add_golden(np.int32, 64, 64, 64, 64, 64, 64, 64, 64)
     out = empty_npu(in1.shape, torch.int32)
     s0 = npu_tensor(in1)
@@ -61,7 +59,9 @@ SMOKE_CASES = [
 
 if __name__ == "__main__":
     from common.reporter import run_smoke_cases
+    from common.torch_runtime import init_torch_npu
 
+    init_torch_npu()
     results = run_smoke_cases(Path(__file__), SMOKE_CASES)
     failed = sum(1 for r in results if not r.passed)
     raise SystemExit(1 if failed else 0)

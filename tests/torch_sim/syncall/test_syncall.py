@@ -15,14 +15,13 @@ sys.path.insert(0, str(_ROOT))
 
 from common.ctypes_utils import bind_launch
 from common.numeric import assert_arrays_match
-from common.torch_runtime import data_ptr, init_torch_npu, stream_ptr, sync, to_numpy, zeros_npu
+from common.torch_runtime import data_ptr, stream_ptr, sync, to_numpy, zeros_npu
 
 _LIB = ctypes.CDLL(str(Path(__file__).parent / "build" / "libsyncall.so"))
 bind_launch(_LIB, "pto_launch_hard_syncall_18", 3)
 
 
 def case_hard_aiv_only_all_blocks():
-    init_torch_npu()
     block_count = 18
     stride = 8
     element_count = block_count * stride
@@ -43,6 +42,8 @@ SMOKE_CASES = [
 
 if __name__ == "__main__":
     from common.reporter import run_smoke_cases
+    from common.torch_runtime import init_torch_npu
 
+    init_torch_npu()
     results = run_smoke_cases(Path(__file__), SMOKE_CASES)
     raise SystemExit(1 if any(not r.passed for r in results) else 0)

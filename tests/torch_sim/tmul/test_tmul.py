@@ -15,7 +15,7 @@ sys.path.insert(0, str(_ROOT))
 
 from common.ctypes_utils import bind_launch
 from common.numeric import assert_arrays_match
-from common.torch_runtime import data_ptr, empty_npu, init_torch_npu, npu_tensor, stream_ptr, sync, to_numpy
+from common.torch_runtime import data_ptr, empty_npu, npu_tensor, stream_ptr, sync, to_numpy
 
 np.random.seed(19)
 _LIB = ctypes.CDLL(str(Path(__file__).parent / "build" / "libtmul.so"))
@@ -32,7 +32,6 @@ def _make_mul_golden(dtype, dh, dw, s0h, s0w, s1h, s1w, vr, vc):
 
 
 def case_float_16x32():
-    init_torch_npu()
     in1, in2, golden = _make_mul_golden(np.float32, 16, 32, 16, 64, 16, 32, 16, 32)
     out = empty_npu((16, 32), torch.float32)
     s0 = npu_tensor(in1)
@@ -43,7 +42,6 @@ def case_float_16x32():
 
 
 def case_int32_16x32():
-    init_torch_npu()
     in1, in2, golden = _make_mul_golden(np.int32, 16, 32, 16, 64, 16, 32, 16, 32)
     out = empty_npu((16, 32), torch.int32)
     s0 = npu_tensor(in1)
@@ -61,6 +59,8 @@ SMOKE_CASES = [
 
 if __name__ == "__main__":
     from common.reporter import run_smoke_cases
+    from common.torch_runtime import init_torch_npu
 
+    init_torch_npu()
     results = run_smoke_cases(Path(__file__), SMOKE_CASES)
     raise SystemExit(1 if any(not r.passed for r in results) else 0)

@@ -15,7 +15,7 @@ sys.path.insert(0, str(_ROOT))
 
 from common.ctypes_utils import bind_launch, bind_launch_int_return
 from common.numeric import assert_arrays_match
-from common.torch_runtime import data_ptr, empty_npu, init_torch_npu, npu_tensor, stream_ptr, sync, to_numpy, zeros_npu
+from common.torch_runtime import data_ptr, npu_tensor, stream_ptr, sync, to_numpy, zeros_npu
 
 _LIB = ctypes.CDLL(str(Path(__file__).parent / "build" / "libtload.so"))
 bind_launch_int_return(_LIB, "pto_get_input_golden_1", 2)
@@ -25,7 +25,6 @@ M, N = 1024, 1024
 
 
 def case_float_GT_128_128_VT_128_128_BLK1():
-    init_torch_npu()
     in_bytes = M * N * 4
     h_in = (ctypes.c_byte * in_bytes)()
     h_gold = (ctypes.c_byte * in_bytes)()
@@ -52,6 +51,8 @@ SMOKE_CASES = [
 
 if __name__ == "__main__":
     from common.reporter import run_smoke_cases
+    from common.torch_runtime import init_torch_npu
 
+    init_torch_npu()
     results = run_smoke_cases(Path(__file__), SMOKE_CASES)
     raise SystemExit(1 if any(not r.passed for r in results) else 0)
