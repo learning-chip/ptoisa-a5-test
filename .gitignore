@@ -5,6 +5,9 @@ tests/cpp/*/cases/
 __pycache__/
 *.pyc
 
+# ca model artifacts
 *.bin
 *.dump
 camodel_log
+profile_*.toml
+*_summary_log

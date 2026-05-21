@@ -7,6 +7,7 @@ Minimal, out-of-source test harness for PTO-ISA NPU (A5) operator tests. Uses pl
 ```
 ptoisa-a5-test/
 ├── third-party/pto-isa/          # git submodule → https://gitcode.com/cann/pto-isa.git
+├── tests/python_wrapper/         # NumPy + pybind + ctypes (no torch_npu) — see tests/python_wrapper/README.md
 ├── tests/cpp/
 │   ├── common/                   # shared headers and build helpers
 │   │   ├── test_common.h         # file I/O + result compare
@@ -58,6 +59,20 @@ git submodule update --init --recursive
 ```
 
 ## Run all smoke tests
+
+**Python (recommended when no real NPU):**
+
+```bash
+cd tests/python_wrapper
+pip install -r requirements.txt
+source ${ASCEND_HOME_PATH}/bin/setenv.bash
+python3 -m common.build --all
+python3 run_smoke.py
+```
+
+Expected: `12 passed` (pytest-style output). Uses camodel via `pto_runtime` pybind — no `torch` / `torch_npu`. See [tests/python_wrapper/wrapper_design_doc.md](tests/python_wrapper/wrapper_design_doc.md).
+
+**C++ (alternative):**
 
 ```bash
 cd tests/cpp
