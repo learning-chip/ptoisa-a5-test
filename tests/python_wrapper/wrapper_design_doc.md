@@ -92,3 +92,7 @@ Each script prepares data (NumPy), launches via `pto_runtime` + ctypes, and veri
 ## Summary
 
 We use **pybind + camodel-linked runtime** for ACL device semantics, and **ctypes + extern-C launch wrappers** for kernels—achieving the same execution model as the cpp smoke tests without torch_npu or a C++ `main()` entry point.
+
+## Complementary path: tests/torch_sim
+
+For teams on the PyTorch Ascend stack, [`tests/torch_sim`](../torch_sim/) provides the same 12 smoke cases using **torch_npu + ctypes** without linking `-lruntime_camodel`. Execution runs under **`msprof op simulator`** (Ascend950PR_9599), which satisfies torch_npu device calls without physical hardware. See [torch_sim_design_doc.md](../torch_sim/torch_sim_design_doc.md).

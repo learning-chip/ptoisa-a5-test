@@ -11,3 +11,6 @@ __pycache__/
 camodel_log
 profile_*.toml
 *_summary_log
+
+# msprof op simulator output (tests/torch_sim/run_smoke.sh)
+**/msprof_res/
