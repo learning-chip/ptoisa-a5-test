@@ -1,0 +1,2079 @@
+[
+  {
+    "id": "ex_0000",
+    "rel_path": "[bench_sfa] sparse_flash_attn_pa",
+    "category": "benchmark",
+    "skip_reason": "bench_sfa performance harness, not correctness smoke",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "sparse_flash_attention/bench_sfa",
+    "kind": "custom"
+  },
+  {
+    "id": "ex_0001",
+    "rel_path": "[bench_sfa] sparse_flash_attn_pa_baseline",
+    "category": "benchmark",
+    "skip_reason": "bench_sfa performance harness, not correctness smoke",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "sparse_flash_attention/bench_sfa",
+    "kind": "custom"
+  },
+  {
+    "id": "ex_0002",
+    "rel_path": "[bench_sfa] sparse_flash_attn_pa_developer",
+    "category": "benchmark",
+    "skip_reason": "bench_sfa performance harness, not correctness smoke",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "sparse_flash_attention/bench_sfa",
+    "kind": "custom"
+  },
+  {
+    "id": "ex_0003",
+    "rel_path": "[bench_sfa] sparse_flash_attn_pa_no_cv_pipeline",
+    "category": "benchmark",
+    "skip_reason": "bench_sfa performance harness, not correctness smoke",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "sparse_flash_attention/bench_sfa",
+    "kind": "custom"
+  },
+  {
+    "id": "ex_0004",
+    "rel_path": "aclgraph/rms_rope_aclgraph.py",
+    "category": "normalization",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "aclgraph/rms_rope_aclgraph.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0005",
+    "rel_path": "activation/gelu_grad.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/gelu_grad.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0006",
+    "rel_path": "activation/gelu_mul.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/gelu_mul.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0007",
+    "rel_path": "activation/sigmoid.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/sigmoid.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0008",
+    "rel_path": "activation/sigmoidv2.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/sigmoidv2.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0009",
+    "rel_path": "activation/sigmoidv2_slice.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/sigmoidv2_slice.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0010",
+    "rel_path": "activation/silu.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/silu.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0011",
+    "rel_path": "activation/swi_glu.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/swi_glu.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0012",
+    "rel_path": "activation/swi_glu_grad.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/swi_glu_grad.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0013",
+    "rel_path": "activation/swi_glu_v2.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "activation/swi_glu_v2.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0014",
+    "rel_path": "activation/tanh.py",
+    "category": "activation",
+    "skip_reason": null,
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "wrappers/tanh_small.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0015",
+    "rel_path": "autotune/example_gemm_autotune.py",
+    "category": "default",
+    "skip_reason": "autotune search exceeds sim time budget",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "autotune/example_gemm_autotune.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0016",
+    "rel_path": "autotune/example_gemm_carver.py",
+    "category": "default",
+    "skip_reason": "autotune search exceeds sim time budget",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "autotune/example_gemm_carver.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0017",
+    "rel_path": "batch_gemm/batch_gemm.py",
+    "category": "batch_gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--m",
+      "64",
+      "--n",
+      "64",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "batch_gemm/batch_gemm.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0018",
+    "rel_path": "blocksparse_gemm/example_blocksparse_gemm.py",
+    "category": "blocksparse_gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "blocksparse_gemm/example_blocksparse_gemm.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0019",
+    "rel_path": "causal_conv1d/causal_conv1d.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "causal_conv1d/causal_conv1d.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0020",
+    "rel_path": "causal_conv1d/causal_conv1d_pto.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "causal_conv1d/causal_conv1d_pto.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0021",
+    "rel_path": "chunk_gated_delta_rule/chunk_gated_delta_rule.py",
+    "category": "chunk_gated_delta_rule",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "chunk_gated_delta_rule/chunk_gated_delta_rule.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0022",
+    "rel_path": "chunk_gated_delta_rule/expert_chunk_gated_delta_rule.py",
+    "category": "chunk_gated_delta_rule",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "chunk_gated_delta_rule/expert_chunk_gated_delta_rule.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0023",
+    "rel_path": "convolution/example_convolution.py",
+    "category": "convolution",
+    "skip_reason": null,
+    "extra_args": [
+      "--n",
+      "1",
+      "--c_in",
+      "16",
+      "--c_out",
+      "16",
+      "--h",
+      "32",
+      "--w",
+      "32"
+    ],
+    "timeout_s": 600,
+    "run_path": "convolution/example_convolution.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0024",
+    "rel_path": "convolution/example_convolution_autotune.py",
+    "category": "convolution",
+    "skip_reason": null,
+    "extra_args": [
+      "--n",
+      "1",
+      "--c_in",
+      "16",
+      "--c_out",
+      "16",
+      "--h",
+      "32",
+      "--w",
+      "32"
+    ],
+    "timeout_s": 600,
+    "run_path": "convolution/example_convolution_autotune.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0025",
+    "rel_path": "cross_entropy_loss/example_cross_entro.py",
+    "category": "default",
+    "skip_reason": null,
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "cross_entropy_loss/example_cross_entro.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0026",
+    "rel_path": "cumsum_gdn/example_cumsum.py",
+    "category": "cumsum",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 600,
+    "run_path": "cumsum_gdn/example_cumsum.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0027",
+    "rel_path": "cumsum_kda/example_cumsum_kda.py",
+    "category": "cumsum",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 600,
+    "run_path": "cumsum_kda/example_cumsum_kda.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0028",
+    "rel_path": "deepseek_v4/act_quant.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "deepseek_v4/act_quant.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0029",
+    "rel_path": "deepseek_v4/hc_split_sinkhorn.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "deepseek_v4/hc_split_sinkhorn.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0030",
+    "rel_path": "deepseek_v4/int8_gemm.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "deepseek_v4/int8_gemm.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0031",
+    "rel_path": "deepseek_v4/sparse_attention.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "deepseek_v4/sparse_attention.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0032",
+    "rel_path": "dequantize_gemm/example_dequant_gemm_fine_grained.py",
+    "category": "dequantize_gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "64",
+      "--n",
+      "64",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "dequantize_gemm/example_dequant_gemm_fine_grained.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0033",
+    "rel_path": "dequantize_gemm/example_dequant_gemm_w4a8.py",
+    "category": "dequantize_gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "64",
+      "--n",
+      "64",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "dequantize_gemm/example_dequant_gemm_w4a8.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0034",
+    "rel_path": "developer_mode/flash_attn_bshd_developer.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "developer_mode/flash_attn_bshd_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0035",
+    "rel_path": "developer_mode/gelu_mul_developer.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "developer_mode/gelu_mul_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0036",
+    "rel_path": "developer_mode/gemm_developer.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "developer_mode/gemm_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0037",
+    "rel_path": "developer_mode/matmul_add_developer.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "developer_mode/matmul_add_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0038",
+    "rel_path": "developer_mode/sparse_flash_attn_developer.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "developer_mode/sparse_flash_attn_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0039",
+    "rel_path": "developer_mode/sparse_flash_attn_developer_vid_reduce.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "developer_mode/sparse_flash_attn_developer_vid_reduce.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0040",
+    "rel_path": "elementwise/elementwise_add.py",
+    "category": "elementwise",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "elementwise/elementwise_add.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0041",
+    "rel_path": "elementwise/elementwise_add_pipeline.py",
+    "category": "elementwise",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "elementwise/elementwise_add_pipeline.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0042",
+    "rel_path": "elementwise/setvalue_example.py",
+    "category": "elementwise",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "elementwise/setvalue_example.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0043",
+    "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_ascendc.py",
+    "category": "flash_attention",
+    "skip_reason": "uses torch_npu.npu_fusion_attention, not TileLang JIT",
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "flash_attention/fa_opt/flash_attn_bhsd_ascendc.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0044",
+    "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_auto_pipeline_h16_d128.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "flash_attention/fa_opt/flash_attn_bhsd_auto_pipeline_h16_d128.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0045",
+    "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_auto_pipeline_h32_d512.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "flash_attention/fa_opt/flash_attn_bhsd_auto_pipeline_h32_d512.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0046",
+    "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_expert_h16_d128.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "flash_attention/fa_opt/flash_attn_bhsd_expert_h16_d128.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0047",
+    "rel_path": "flash_attention/flash_attn_bhsd.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [],
+    "timeout_s": 1800,
+    "run_path": "flash_attention/flash_attn_bhsd.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0048",
+    "rel_path": "flash_attention/flash_attn_bhsd_cc_sync.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [],
+    "timeout_s": 1800,
+    "run_path": "flash_attention/flash_attn_bhsd_cc_sync.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0049",
+    "rel_path": "flash_attention/paged_flash_attn_bhsd.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "flash_attention/paged_flash_attn_bhsd.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0050",
+    "rel_path": "fused_sigmoid_gating_delta_rule/fused_sigmoid_gating_delta_rule_varlen.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "fused_sigmoid_gating_delta_rule/fused_sigmoid_gating_delta_rule_varlen.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0051",
+    "rel_path": "gemm/example_gemm.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0052",
+    "rel_path": "gemm/example_gemm_infer_scope.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm_infer_scope.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0053",
+    "rel_path": "gemm/example_gemm_intrinsic.py",
+    "category": "gemm",
+    "skip_reason": "target=ascendc out of scope",
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm_intrinsic.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0054",
+    "rel_path": "gemm/example_gemm_intrinsic_persistent.py",
+    "category": "gemm",
+    "skip_reason": "target=ascendc out of scope",
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm_intrinsic_persistent.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0055",
+    "rel_path": "gemm/example_gemm_persistent.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm_persistent.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0056",
+    "rel_path": "gemm/example_gemm_pto_developer.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm_pto_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0057",
+    "rel_path": "gemm/example_gemm_tail_block_developer.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm_tail_block_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0058",
+    "rel_path": "gemm/example_gemm_transpose_l1.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm/example_gemm_transpose_l1.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0059",
+    "rel_path": "gemm_aot/run_example_gemm_aot.sh",
+    "category": "default",
+    "skip_reason": "AOT ctypes workflow, not @tilelang.jit PTO",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "gemm_aot/run_example_gemm_aot.sh",
+    "kind": "shell"
+  },
+  {
+    "id": "ex_0060",
+    "rel_path": "gemm_splitk/example_tilelang_gemm_splitk.py",
+    "category": "gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemm_splitk/example_tilelang_gemm_splitk.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0061",
+    "rel_path": "gemv/example_gemv_c.py",
+    "category": "gemv",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemv/example_gemv_c.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0062",
+    "rel_path": "gemv/example_gemv_v.py",
+    "category": "gemv",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "gemv/example_gemv_v.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0063",
+    "rel_path": "grouped_gemm/example_grouped_gemm_bwd.py",
+    "category": "grouped_gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "256",
+      "--n",
+      "256",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "grouped_gemm/example_grouped_gemm_bwd.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0064",
+    "rel_path": "grouped_gemm/example_grouped_gemm_fwd.py",
+    "category": "grouped_gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "256",
+      "--n",
+      "256",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "grouped_gemm/example_grouped_gemm_fwd.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0065",
+    "rel_path": "grouped_gemm/example_grouped_gemm_fwd_ptr.py",
+    "category": "grouped_gemm",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "256",
+      "--n",
+      "256",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "grouped_gemm/example_grouped_gemm_fwd_ptr.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0066",
+    "rel_path": "hadamard_transform/example_hadamard_transform.py",
+    "category": "hadamard",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "64",
+      "--n",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "hadamard_transform/example_hadamard_transform.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0067",
+    "rel_path": "lightning_indexer/example_lightning_indexer.py",
+    "category": "lightning_indexer",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--s",
+      "64",
+      "--h",
+      "4",
+      "--d",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "lightning_indexer/example_lightning_indexer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0068",
+    "rel_path": "lightning_indexer/example_lightning_indexer_dynamic_shape.py",
+    "category": "lightning_indexer",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--s",
+      "64",
+      "--h",
+      "4",
+      "--d",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "lightning_indexer/example_lightning_indexer_dynamic_shape.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0069",
+    "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_cumsum.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "2",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/gdn/gdn_chunk_cumsum.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0070",
+    "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_h.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/gdn/gdn_chunk_h.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0071",
+    "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_o.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/gdn/gdn_chunk_o.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0072",
+    "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_scaled_dot_kkt.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/gdn/gdn_chunk_scaled_dot_kkt.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0073",
+    "rel_path": "linear_attention_and_rnn/gdn/gdn_solve_tril.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/gdn/gdn_solve_tril.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0074",
+    "rel_path": "linear_attention_and_rnn/gdn/gdn_wy_fast.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/gdn/gdn_wy_fast.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0075",
+    "rel_path": "linear_attention_and_rnn/gdn_full.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/gdn_full.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0076",
+    "rel_path": "linear_attention_and_rnn/linear_attention_causal.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/linear_attention_causal.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0077",
+    "rel_path": "linear_attention_and_rnn/linear_attention_normalize.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/linear_attention_normalize.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0078",
+    "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_cumsum.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "2",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_cumsum.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0079",
+    "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_h.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_h.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0080",
+    "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_o.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_o.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0081",
+    "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_scaled_dot_kkt.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_scaled_dot_kkt.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0082",
+    "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_solve_tril.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_solve_tril.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0083",
+    "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_wy_fast.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_wy_fast.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0084",
+    "rel_path": "linear_attention_and_rnn/opt_gdn_full.py",
+    "category": "gdn",
+    "skip_reason": null,
+    "extra_args": [
+      "--b",
+      "1",
+      "--h",
+      "4",
+      "--l",
+      "64",
+      "--c",
+      "16"
+    ],
+    "timeout_s": 1800,
+    "run_path": "linear_attention_and_rnn/opt_gdn_full.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0085",
+    "rel_path": "moe_token_permute/moe_token_permute.py",
+    "category": "moe",
+    "skip_reason": null,
+    "extra_args": [
+      "--num_tokens",
+      "64",
+      "--hidden",
+      "128",
+      "--topk",
+      "2"
+    ],
+    "timeout_s": 600,
+    "run_path": "moe_token_permute/moe_token_permute.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0086",
+    "rel_path": "moe_token_permute/moe_token_permute_grad.py",
+    "category": "moe",
+    "skip_reason": null,
+    "extra_args": [
+      "--num_tokens",
+      "64",
+      "--hidden",
+      "128",
+      "--topk",
+      "2"
+    ],
+    "timeout_s": 600,
+    "run_path": "moe_token_permute/moe_token_permute_grad.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0087",
+    "rel_path": "moe_token_permute/moe_token_unpermute.py",
+    "category": "moe",
+    "skip_reason": null,
+    "extra_args": [
+      "--num_tokens",
+      "64",
+      "--hidden",
+      "128",
+      "--topk",
+      "2"
+    ],
+    "timeout_s": 600,
+    "run_path": "moe_token_permute/moe_token_unpermute.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0088",
+    "rel_path": "moe_token_permute/moe_token_unpermute_grad.py",
+    "category": "moe",
+    "skip_reason": null,
+    "extra_args": [
+      "--num_tokens",
+      "64",
+      "--hidden",
+      "128",
+      "--topk",
+      "2"
+    ],
+    "timeout_s": 600,
+    "run_path": "moe_token_permute/moe_token_unpermute_grad.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0089",
+    "rel_path": "moe_token_permute/moe_token_utils.py",
+    "category": "moe",
+    "skip_reason": null,
+    "extra_args": [
+      "--num_tokens",
+      "64",
+      "--hidden",
+      "128",
+      "--topk",
+      "2"
+    ],
+    "timeout_s": 600,
+    "run_path": "moe_token_permute/moe_token_utils.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0090",
+    "rel_path": "normalization/layer_norm.py",
+    "category": "normalization",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "normalization/layer_norm.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0091",
+    "rel_path": "normalization/rms_norm.py",
+    "category": "normalization",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "normalization/rms_norm.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0092",
+    "rel_path": "pad/example_broadcast.py",
+    "category": "pad",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pad/example_broadcast.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0093",
+    "rel_path": "pad/example_broadcast_pipeline.py",
+    "category": "pad",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pad/example_broadcast_pipeline.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0094",
+    "rel_path": "pipeline/flash_attn_bshd_pipeline.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pipeline/flash_attn_bshd_pipeline.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0095",
+    "rel_path": "pipeline/gemm_v0_pipeline.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pipeline/gemm_v0_pipeline.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0096",
+    "rel_path": "pipeline/matmul_add_pipeline.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pipeline/matmul_add_pipeline.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0097",
+    "rel_path": "pipeline/sparse_flash_attn_gqa_pipeline.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pipeline/sparse_flash_attn_gqa_pipeline.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0098",
+    "rel_path": "pipeline/sparse_flash_attn_gqa_pipeline_pto.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pipeline/sparse_flash_attn_gqa_pipeline_pto.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0099",
+    "rel_path": "pos_embedding/rms_norm.py",
+    "category": "pos_embedding",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pos_embedding/rms_norm.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0100",
+    "rel_path": "pos_embedding/rms_rope_fused.py",
+    "category": "pos_embedding",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pos_embedding/rms_rope_fused.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0101",
+    "rel_path": "pos_embedding/rms_rope_fused_mask.py",
+    "category": "pos_embedding",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pos_embedding/rms_rope_fused_mask.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0102",
+    "rel_path": "pos_embedding/rope.py",
+    "category": "pos_embedding",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pos_embedding/rope.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0103",
+    "rel_path": "pos_embedding/rope_mask.py",
+    "category": "pos_embedding",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pos_embedding/rope_mask.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0104",
+    "rel_path": "pos_embedding/rope_mask_bwd.py",
+    "category": "pos_embedding",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "pos_embedding/rope_mask_bwd.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0105",
+    "rel_path": "print/elementwise_print.py",
+    "category": "elementwise",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256"
+    ],
+    "timeout_s": 600,
+    "run_path": "print/elementwise_print.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0106",
+    "rel_path": "quant_batch_matmul/example_quant_batch_matmul.py",
+    "category": "quant",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "64",
+      "--n",
+      "64",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "quant_batch_matmul/example_quant_batch_matmul.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0107",
+    "rel_path": "quant_batch_matmul/example_quant_matmul.py",
+    "category": "quant",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "64",
+      "--n",
+      "64",
+      "--k",
+      "64"
+    ],
+    "timeout_s": 600,
+    "run_path": "quant_batch_matmul/example_quant_matmul.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0108",
+    "rel_path": "random_1d/random_1d.py",
+    "category": "random_1d",
+    "skip_reason": null,
+    "extra_args": [
+      "--num_elements",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "random_1d/random_1d.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0109",
+    "rel_path": "reduce/example_col_reduce_max_slice_buffer.py",
+    "category": "reduce",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "reduce/example_col_reduce_max_slice_buffer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0110",
+    "rel_path": "reduce/example_reduce_min.py",
+    "category": "reduce",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "reduce/example_reduce_min.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0111",
+    "rel_path": "reduce/example_reduce_min_pipeline.py",
+    "category": "reduce",
+    "skip_reason": "target=ascendc out of scope",
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "reduce/example_reduce_min_pipeline.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0112",
+    "rel_path": "reduce/example_row_reduce_max_slice_buffer.py",
+    "category": "reduce",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "reduce/example_row_reduce_max_slice_buffer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0113",
+    "rel_path": "seer_attention/block_sparse_attn.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "seer_attention/block_sparse_attn.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0114",
+    "rel_path": "simple_fusion/matmul_add.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "simple_fusion/matmul_add.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0115",
+    "rel_path": "simple_fusion/matmul_add_infer_scope.py",
+    "category": "fusion",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "256",
+      "--k",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "simple_fusion/matmul_add_infer_scope.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0116",
+    "rel_path": "softmax/example_online_softmax.py",
+    "category": "softmax",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "128",
+      "--n",
+      "128"
+    ],
+    "timeout_s": 600,
+    "run_path": "softmax/example_online_softmax.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0117",
+    "rel_path": "sort/example_merge_sort.py",
+    "category": "default",
+    "skip_reason": null,
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "sort/example_merge_sort.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0118",
+    "rel_path": "sparse_flash_attention/example_sparse_flash_attn.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [],
+    "timeout_s": 1800,
+    "run_path": "wrappers/sparse_flash_attn_small.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0119",
+    "rel_path": "sparse_flash_attention/example_sparse_flash_attn_dynamic_shape.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "sparse_flash_attention/example_sparse_flash_attn_dynamic_shape.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0120",
+    "rel_path": "sparse_flash_attention/example_sparse_flash_attn_gqa.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "sparse_flash_attention/example_sparse_flash_attn_gqa.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0121",
+    "rel_path": "sparse_flash_attention/example_sparse_flash_attn_gqa_pto.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "sparse_flash_attention/example_sparse_flash_attn_gqa_pto.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0122",
+    "rel_path": "sparse_flash_attention/example_sparse_flash_attn_gqa_pto_developer.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "sparse_flash_attention/example_sparse_flash_attn_gqa_pto_developer.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0123",
+    "rel_path": "sparse_flash_attention/example_sparse_flash_attn_mask.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "sparse_flash_attention/example_sparse_flash_attn_mask.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0124",
+    "rel_path": "sparse_flash_attention/example_sparse_flash_attn_mask_pa.py",
+    "category": "flash_attention",
+    "skip_reason": null,
+    "extra_args": [
+      "--B",
+      "1",
+      "--S",
+      "64",
+      "--H",
+      "1",
+      "--D",
+      "64"
+    ],
+    "timeout_s": 1800,
+    "run_path": "sparse_flash_attention/example_sparse_flash_attn_mask_pa.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0125",
+    "rel_path": "topk_selector/example_topk_selector.py",
+    "category": "topk",
+    "skip_reason": null,
+    "extra_args": [
+      "--m",
+      "64",
+      "--n",
+      "128",
+      "--k",
+      "8"
+    ],
+    "timeout_s": 600,
+    "run_path": "topk_selector/example_topk_selector.py",
+    "kind": "python"
+  },
+  {
+    "id": "ex_0126",
+    "rel_path": "torch_tl_ascend/test_example.sh",
+    "category": "default",
+    "skip_reason": "PyTorch C extension integration, not standard JIT",
+    "extra_args": [],
+    "timeout_s": 600,
+    "run_path": "torch_tl_ascend/test_example.sh",
+    "kind": "shell"
+  }
+]

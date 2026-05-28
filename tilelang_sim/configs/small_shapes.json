@@ -1,0 +1,43 @@
+{
+  "category_defaults": {
+    "gemm": ["--m", "128", "--n", "256", "--k", "128"],
+    "gemv": ["--m", "128", "--n", "256"],
+    "fusion": ["--m", "128", "--n", "256", "--k", "128"],
+    "elementwise": ["--m", "128", "--n", "256"],
+    "activation": ["--m", "128", "--n", "256"],
+    "batch_gemm": ["--b", "1", "--m", "64", "--n", "64", "--k", "64"],
+    "flash_attention": ["--B", "1", "--S", "64", "--H", "1", "--D", "64"],
+    "convolution": ["--n", "1", "--c_in", "16", "--c_out", "16", "--h", "32", "--w", "32"],
+    "normalization": ["--m", "128", "--n", "128"],
+    "reduce": ["--m", "128", "--n", "128"],
+    "softmax": ["--m", "128", "--n", "128"],
+    "pad": ["--m", "128", "--n", "128"],
+    "pos_embedding": ["--m", "128", "--n", "128"],
+    "quant": ["--m", "64", "--n", "64", "--k", "64"],
+    "topk": ["--m", "64", "--n", "128", "--k", "8"],
+    "cumsum": ["--b", "1", "--h", "4", "--l", "64", "--c", "16"],
+    "chunk_gated_delta_rule": ["--b", "1", "--h", "4", "--l", "64", "--c", "16"],
+    "grouped_gemm": ["--m", "256", "--n", "256", "--k", "64"],
+    "blocksparse_gemm": ["--m", "128", "--n", "128", "--k", "128"],
+    "dequantize_gemm": ["--m", "64", "--n", "64", "--k", "64"],
+    "hadamard": ["--m", "64", "--n", "64"],
+    "lightning_indexer": ["--b", "1", "--s", "64", "--h", "4", "--d", "64"],
+    "moe": ["--num_tokens", "64", "--hidden", "128", "--topk", "2"],
+    "random_1d": ["--num_elements", "128"],
+    "gdn": ["--b", "1", "--h", "4", "--l", "64", "--c", "16"],
+    "default": []
+  },
+  "per_script": {
+    "flash_attention/flash_attn_bhsd.py": [],
+    "flash_attention/paged_flash_attn_bhsd.py": ["--B", "1", "--S", "64", "--H", "1", "--D", "64"],
+    "flash_attention/flash_attn_bhsd_cc_sync.py": [],
+    "sparse_flash_attention/example_sparse_flash_attn.py": [],
+    "activation/tanh.py": [],
+    "linear_attention_and_rnn/gdn/gdn_chunk_cumsum.py": ["--b", "1", "--h", "2", "--l", "64", "--c", "16"],
+    "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_cumsum.py": ["--b", "1", "--h", "2", "--l", "64", "--c", "16"]
+  },
+  "wrappers": {
+    "activation/tanh.py": "wrappers/tanh_small.py",
+    "sparse_flash_attention/example_sparse_flash_attn.py": "wrappers/sparse_flash_attn_small.py"
+  }
+}
