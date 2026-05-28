@@ -1,0 +1,538 @@
+{
+  "generated_from": "/workdir/ptoisa-a5-test/tilelang_sim/configs/pass_shapes.json",
+  "tilelang_examples_root": "/sources/tilelang-ascend/examples",
+  "target": "pto",
+  "platform": "A5",
+  "kernels": [
+    {
+      "id": "tanh_m64_n64",
+      "source_file": "tanh_m64_n64_a5.cpp",
+      "lib_file": "libtanh_m64_n64_a5.so",
+      "tilelang_example": "activation/tanh.py",
+      "case": {
+        "M": 64,
+        "N": 64,
+        "block_M": 64,
+        "block_N": 64,
+        "dtype": "float32",
+        "elements": 4096
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 2,
+      "source_bytes": 2166,
+      "params": [
+        "KernelParam(dtype=torch.float32, shape=[64, 64])",
+        "KernelParam(dtype=torch.float32, shape=[64, 64])"
+      ],
+      "out_idx": [
+        1
+      ]
+    },
+    {
+      "id": "tanh_m128_n128",
+      "source_file": "tanh_m128_n128_a5.cpp",
+      "lib_file": "libtanh_m128_n128_a5.so",
+      "tilelang_example": "activation/tanh.py",
+      "case": {
+        "M": 128,
+        "N": 128,
+        "block_M": 64,
+        "block_N": 64,
+        "dtype": "float32",
+        "elements": 16384
+      },
+      "call_symbol": "call",
+      "block_dim": 4,
+      "num_tensor_args": 2,
+      "source_bytes": 2258,
+      "params": [
+        "KernelParam(dtype=torch.float32, shape=[128, 128])",
+        "KernelParam(dtype=torch.float32, shape=[128, 128])"
+      ],
+      "out_idx": [
+        1
+      ]
+    },
+    {
+      "id": "developer_mode_gemm_developer_m128_n256_k128",
+      "source_file": "developer_mode_gemm_developer_m128_n256_k128_a5.cpp",
+      "lib_file": "libdeveloper_mode_gemm_developer_m128_n256_k128_a5.so",
+      "tilelang_example": "developer_mode/gemm_developer.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "K": 128,
+        "block_M": 128,
+        "block_N": 256,
+        "K_L1": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 3,
+      "source_bytes": 2090,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[128, 128])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "developer_mode_matmul_add_developer_m128_n256_k128",
+      "source_file": "developer_mode_matmul_add_developer_m128_n256_k128_a5.cpp",
+      "lib_file": "libdeveloper_mode_matmul_add_developer_m128_n256_k128_a5.so",
+      "tilelang_example": "developer_mode/matmul_add_developer.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "K": 128,
+        "block_M": 128,
+        "block_N": 256,
+        "block_K": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 5,
+      "source_bytes": 3441,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[128, 128])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[1, 128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "elementwise_elementwise_add_m128_n256",
+      "source_file": "elementwise_elementwise_add_m128_n256_a5.cpp",
+      "lib_file": "libelementwise_elementwise_add_m128_n256_a5.so",
+      "tilelang_example": "elementwise/elementwise_add.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "block_M": 128,
+        "block_N": 256,
+        "dtype": "float32",
+        "elements": 32768
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 3,
+      "source_bytes": 1893,
+      "params": [
+        "KernelParam(dtype=torch.float32, shape=[128, 256])",
+        "KernelParam(dtype=torch.float32, shape=[128, 256])",
+        "KernelParam(dtype=torch.float32, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "elementwise_elementwise_add_pipeline_m128_n256",
+      "source_file": "elementwise_elementwise_add_pipeline_m128_n256_a5.cpp",
+      "lib_file": "libelementwise_elementwise_add_pipeline_m128_n256_a5.so",
+      "tilelang_example": "elementwise/elementwise_add_pipeline.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "block_M": 128,
+        "block_N": 256,
+        "dtype": "float32",
+        "elements": 32768
+      },
+      "call_symbol": "call",
+      "block_dim": 2,
+      "num_tensor_args": 3,
+      "source_bytes": 3698,
+      "params": [
+        "KernelParam(dtype=torch.float32, shape=[128, 256])",
+        "KernelParam(dtype=torch.float32, shape=[128, 256])",
+        "KernelParam(dtype=torch.float32, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_example_gemm_m128_n256_k128",
+      "source_file": "gemm_example_gemm_m128_n256_k128_a5.cpp",
+      "lib_file": "libgemm_example_gemm_m128_n256_k128_a5.so",
+      "tilelang_example": "gemm/example_gemm.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "K": 128,
+        "block_M": 128,
+        "block_N": 256,
+        "K_L1": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 3,
+      "source_bytes": 1849,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[128, 128])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_example_gemm_infer_scope_m128_n256_k128",
+      "source_file": "gemm_example_gemm_infer_scope_m128_n256_k128_a5.cpp",
+      "lib_file": "libgemm_example_gemm_infer_scope_m128_n256_k128_a5.so",
+      "tilelang_example": "gemm/example_gemm_infer_scope.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "K": 128,
+        "block_M": 128,
+        "block_N": 256,
+        "K_L1": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 3,
+      "source_bytes": 2090,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[128, 128])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_example_gemm_persistent_m128_n256_k128",
+      "source_file": "gemm_example_gemm_persistent_m128_n256_k128_a5.cpp",
+      "lib_file": "libgemm_example_gemm_persistent_m128_n256_k128_a5.so",
+      "tilelang_example": "gemm/example_gemm_persistent.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "K": 128,
+        "block_M": 128,
+        "block_N": 256,
+        "K_L1": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 3,
+      "source_bytes": 1849,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[128, 128])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_example_gemm_pto_developer_m128_n256_k128",
+      "source_file": "gemm_example_gemm_pto_developer_m128_n256_k128_a5.cpp",
+      "lib_file": "libgemm_example_gemm_pto_developer_m128_n256_k128_a5.so",
+      "tilelang_example": "gemm/example_gemm_pto_developer.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "K": 128,
+        "block_M": 128,
+        "block_N": 256,
+        "K_L1": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 3,
+      "source_bytes": 2090,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[128, 128])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_tail_block_m126_n80_k159",
+      "source_file": "gemm_tail_block_m126_n80_k159_a5.cpp",
+      "lib_file": "libgemm_tail_block_m126_n80_k159_a5.so",
+      "tilelang_example": "gemm/example_gemm_tail_block_developer.py",
+      "case": {
+        "M": 126,
+        "N": 80,
+        "K": 159,
+        "block_M": 32,
+        "block_N": 32,
+        "K_L1": 32,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 12,
+      "num_tensor_args": 3,
+      "source_bytes": 2386,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[126, 159])",
+        "KernelParam(dtype=torch.float16, shape=[159, 80])",
+        "KernelParam(dtype=torch.float16, shape=[126, 80])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_tail_block_m557_n512_k539",
+      "source_file": "gemm_tail_block_m557_n512_k539_a5.cpp",
+      "lib_file": "libgemm_tail_block_m557_n512_k539_a5.so",
+      "tilelang_example": "gemm/example_gemm_tail_block_developer.py",
+      "case": {
+        "M": 557,
+        "N": 512,
+        "K": 539,
+        "block_M": 64,
+        "block_N": 64,
+        "K_L1": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 72,
+      "num_tensor_args": 3,
+      "source_bytes": 2302,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[557, 539])",
+        "KernelParam(dtype=torch.float16, shape=[539, 512])",
+        "KernelParam(dtype=torch.float16, shape=[557, 512])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_tail_block_m512_n611_k512",
+      "source_file": "gemm_tail_block_m512_n611_k512_a5.cpp",
+      "lib_file": "libgemm_tail_block_m512_n611_k512_a5.so",
+      "tilelang_example": "gemm/example_gemm_tail_block_developer.py",
+      "case": {
+        "M": 512,
+        "N": 611,
+        "K": 512,
+        "block_M": 128,
+        "block_N": 128,
+        "K_L1": 128,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 20,
+      "num_tensor_args": 3,
+      "source_bytes": 2292,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[512, 512])",
+        "KernelParam(dtype=torch.float16, shape=[512, 611])",
+        "KernelParam(dtype=torch.float16, shape=[512, 611])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "gemm_tail_block_m1142_n1230_k1079",
+      "source_file": "gemm_tail_block_m1142_n1230_k1079_a5.cpp",
+      "lib_file": "libgemm_tail_block_m1142_n1230_k1079_a5.so",
+      "tilelang_example": "gemm/example_gemm_tail_block_developer.py",
+      "case": {
+        "M": 1142,
+        "N": 1230,
+        "K": 1079,
+        "block_M": 128,
+        "block_N": 256,
+        "K_L1": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 45,
+      "num_tensor_args": 3,
+      "source_bytes": 2447,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[1142, 1079])",
+        "KernelParam(dtype=torch.float16, shape=[1079, 1230])",
+        "KernelParam(dtype=torch.float16, shape=[1142, 1230])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "pipeline_matmul_add_pipeline_m128_n256_k128",
+      "source_file": "pipeline_matmul_add_pipeline_m128_n256_k128_a5.cpp",
+      "lib_file": "libpipeline_matmul_add_pipeline_m128_n256_k128_a5.so",
+      "tilelang_example": "pipeline/matmul_add_pipeline.py",
+      "case": {
+        "M": 128,
+        "N": 256,
+        "K": 128,
+        "block_M": 128,
+        "block_N": 256,
+        "block_K": 64,
+        "dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 5,
+      "source_bytes": 7221,
+      "params": [
+        "KernelParam(dtype=torch.float16, shape=[128, 128])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])",
+        "KernelParam(dtype=torch.float16, shape=[128, 256])"
+      ],
+      "out_idx": [
+        2
+      ]
+    },
+    {
+      "id": "quant_batch_matmul_b8_scale1_float16_m64",
+      "source_file": "quant_batch_matmul_b8_scale1_float16_m64_a5.cpp",
+      "lib_file": "libquant_batch_matmul_b8_scale1_float16_m64_a5.so",
+      "tilelang_example": "quant_batch_matmul/example_quant_batch_matmul.py",
+      "case": {
+        "Batch": 8,
+        "M": 64,
+        "N": 64,
+        "K": 64,
+        "block_M": 128,
+        "block_N": 256,
+        "block_K": 64,
+        "scale_size": "1",
+        "in_dtype": "int8",
+        "out_dtype": "float16"
+      },
+      "call_symbol": "call",
+      "block_dim": 8,
+      "num_tensor_args": 5,
+      "source_bytes": 4362,
+      "params": [
+        "KernelParam(dtype=torch.int8, shape=[8, 64, 64])",
+        "KernelParam(dtype=torch.int8, shape=[8, 64, 64])",
+        "KernelParam(dtype=torch.float32, shape=[1])",
+        "KernelParam(dtype=torch.float16, shape=[8, 64, 64])",
+        "KernelParam(dtype=torch.int32, shape=[8, 64, 64])"
+      ],
+      "out_idx": [
+        3
+      ]
+    },
+    {
+      "id": "quant_batch_matmul_b8_scaleN_bfloat16_m64",
+      "source_file": "quant_batch_matmul_b8_scaleN_bfloat16_m64_a5.cpp",
+      "lib_file": "libquant_batch_matmul_b8_scaleN_bfloat16_m64_a5.so",
+      "tilelang_example": "quant_batch_matmul/example_quant_batch_matmul.py",
+      "case": {
+        "Batch": 8,
+        "M": 64,
+        "N": 64,
+        "K": 64,
+        "block_M": 128,
+        "block_N": 256,
+        "block_K": 64,
+        "scale_size": "N",
+        "in_dtype": "int8",
+        "out_dtype": "bfloat16"
+      },
+      "call_symbol": "call",
+      "block_dim": 8,
+      "num_tensor_args": 5,
+      "source_bytes": 4265,
+      "params": [
+        "KernelParam(dtype=torch.int8, shape=[8, 64, 64])",
+        "KernelParam(dtype=torch.int8, shape=[8, 64, 64])",
+        "KernelParam(dtype=torch.float32, shape=[64])",
+        "KernelParam(dtype=torch.bfloat16, shape=[8, 64, 64])",
+        "KernelParam(dtype=torch.int32, shape=[8, 64, 64])"
+      ],
+      "out_idx": [
+        3
+      ]
+    },
+    {
+      "id": "quant_matmul_scale1_bfloat16_m64",
+      "source_file": "quant_matmul_scale1_bfloat16_m64_a5.cpp",
+      "lib_file": "libquant_matmul_scale1_bfloat16_m64_a5.so",
+      "tilelang_example": "quant_batch_matmul/example_quant_matmul.py",
+      "case": {
+        "M": 64,
+        "N": 64,
+        "K": 64,
+        "block_M": 128,
+        "block_N": 256,
+        "block_K": 64,
+        "scale_size": "1",
+        "out_dtype": "bfloat16",
+        "in_dtype": "int8"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 5,
+      "source_bytes": 4305,
+      "params": [
+        "KernelParam(dtype=torch.int8, shape=[64, 64])",
+        "KernelParam(dtype=torch.int8, shape=[64, 64])",
+        "KernelParam(dtype=torch.float32, shape=[1])",
+        "KernelParam(dtype=torch.bfloat16, shape=[64, 64])",
+        "KernelParam(dtype=torch.int32, shape=[64, 64])"
+      ],
+      "out_idx": [
+        3
+      ]
+    },
+    {
+      "id": "quant_matmul_scaleN_float16_m64",
+      "source_file": "quant_matmul_scaleN_float16_m64_a5.cpp",
+      "lib_file": "libquant_matmul_scaleN_float16_m64_a5.so",
+      "tilelang_example": "quant_batch_matmul/example_quant_matmul.py",
+      "case": {
+        "M": 64,
+        "N": 64,
+        "K": 64,
+        "block_M": 128,
+        "block_N": 256,
+        "block_K": 64,
+        "scale_size": "N",
+        "out_dtype": "float16",
+        "in_dtype": "int8"
+      },
+      "call_symbol": "call",
+      "block_dim": 1,
+      "num_tensor_args": 5,
+      "source_bytes": 4148,
+      "params": [
+        "KernelParam(dtype=torch.int8, shape=[64, 64])",
+        "KernelParam(dtype=torch.int8, shape=[64, 64])",
+        "KernelParam(dtype=torch.float32, shape=[64])",
+        "KernelParam(dtype=torch.float16, shape=[64, 64])",
+        "KernelParam(dtype=torch.int32, shape=[64, 64])"
+      ],
+      "out_idx": [
+        3
+      ]
+    }
+  ],
+  "errors": []
+}

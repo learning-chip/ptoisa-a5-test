@@ -1,0 +1,849 @@
+{
+  "generated_at": "2026-05-28T04:00:31.648986+00:00",
+  "soc_version": "Ascend950PR_9599",
+  "simulator": "msprof op simulator",
+  "target": "pto",
+  "platform": "A5",
+  "count": 13,
+  "rows": [
+    {
+      "id": "ex_0014",
+      "rel_path": "activation/tanh.py",
+      "run_path": "wrappers/tanh_small.py",
+      "cli_args": [],
+      "input_shapes": [
+        {
+          "M": 64,
+          "N": 64,
+          "block_M": 64,
+          "block_N": 64,
+          "dtype": "float32",
+          "elements": 4096
+        },
+        {
+          "M": 128,
+          "N": 128,
+          "block_M": 64,
+          "block_N": 64,
+          "dtype": "float32",
+          "elements": 16384
+        }
+      ],
+      "shape_summary": "case1: M=64, N=64, block_M=64, block_N=64, elements=4096, dtype=float32; case2: M=128, N=128, block_M=64, block_N=64, elements=16384, dtype=float32",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 46.58,
+      "runner_duration_s": 40.00395871512592,
+      "status": "PASS",
+      "sim_model_run_ms": 32259.2,
+      "sim_core_duration_us": 1.25,
+      "sim_core_running_us": 1.0,
+      "sim_model_run_ms_all": [
+        32259.2
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.veccore0",
+          "duration_us": 1.25,
+          "running_us": 1.0
+        },
+        {
+          "name": "core0.veccore1",
+          "duration_us": 1.12,
+          "running_us": 0.97
+        }
+      ]
+    },
+    {
+      "id": "ex_0036",
+      "rel_path": "developer_mode/gemm_developer.py",
+      "run_path": "developer_mode/gemm_developer.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256",
+        "--k",
+        "128"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "K": 128,
+          "block_M": 128,
+          "block_N": 256,
+          "K_L1": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "M=128, N=256, K=128, block_M=128, block_N=256, K_L1=64, dtype=float16",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 34.27,
+      "runner_duration_s": 26.93655795091763,
+      "status": "PASS",
+      "sim_model_run_ms": 19192.1,
+      "sim_core_duration_us": 3.68,
+      "sim_core_running_us": 3.68,
+      "sim_model_run_ms_all": [
+        19192.1
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 3.68,
+          "running_us": 3.68
+        }
+      ]
+    },
+    {
+      "id": "ex_0037",
+      "rel_path": "developer_mode/matmul_add_developer.py",
+      "run_path": "developer_mode/matmul_add_developer.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256",
+        "--k",
+        "128"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "K": 128,
+          "block_M": 128,
+          "block_N": 256,
+          "block_K": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "M=128, N=256, K=128, block_M=128, block_N=256, block_K=64, dtype=float16",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 46.53,
+      "runner_duration_s": 38.96612959518097,
+      "status": "PASS",
+      "sim_model_run_ms": 31327.9,
+      "sim_core_duration_us": 8.24,
+      "sim_core_running_us": 8.23,
+      "sim_model_run_ms_all": [
+        31327.9
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 5.2,
+          "running_us": 5.19
+        },
+        {
+          "name": "core0.veccore0",
+          "duration_us": 8.21,
+          "running_us": 8.2
+        },
+        {
+          "name": "core0.veccore1",
+          "duration_us": 8.24,
+          "running_us": 8.23
+        }
+      ]
+    },
+    {
+      "id": "ex_0040",
+      "rel_path": "elementwise/elementwise_add.py",
+      "run_path": "elementwise/elementwise_add.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "block_M": 128,
+          "block_N": 256,
+          "dtype": "float32",
+          "elements": 32768
+        }
+      ],
+      "shape_summary": "M=128, N=256, block_M=128, block_N=256, elements=32768, dtype=float32",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 44.46,
+      "runner_duration_s": 36.42954878392629,
+      "status": "PASS",
+      "sim_model_run_ms": 28772.6,
+      "sim_core_duration_us": 6.14,
+      "sim_core_running_us": 6.08,
+      "sim_model_run_ms_all": [
+        28772.6
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.veccore0",
+          "duration_us": 5.76,
+          "running_us": 5.71
+        },
+        {
+          "name": "core0.veccore1",
+          "duration_us": 6.14,
+          "running_us": 6.08
+        }
+      ]
+    },
+    {
+      "id": "ex_0041",
+      "rel_path": "elementwise/elementwise_add_pipeline.py",
+      "run_path": "elementwise/elementwise_add_pipeline.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "block_M": 128,
+          "block_N": 256,
+          "dtype": "float32",
+          "elements": 32768
+        }
+      ],
+      "shape_summary": "M=128, N=256, block_M=128, block_N=256, elements=32768, dtype=float32",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 35.31,
+      "runner_duration_s": 27.788604761008173,
+      "status": "PASS",
+      "sim_model_run_ms": 20168.4,
+      "sim_core_duration_us": 3.91,
+      "sim_core_running_us": 3.87,
+      "sim_model_run_ms_all": [
+        20168.4
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.veccore0",
+          "duration_us": 3.0,
+          "running_us": 2.98
+        },
+        {
+          "name": "core0.veccore1",
+          "duration_us": 3.88,
+          "running_us": 3.87
+        },
+        {
+          "name": "core1.veccore0",
+          "duration_us": 3.05,
+          "running_us": 3.02
+        },
+        {
+          "name": "core1.veccore1",
+          "duration_us": 3.91,
+          "running_us": 3.87
+        }
+      ]
+    },
+    {
+      "id": "ex_0051",
+      "rel_path": "gemm/example_gemm.py",
+      "run_path": "gemm/example_gemm.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256",
+        "--k",
+        "128"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "K": 128,
+          "block_M": 128,
+          "block_N": 256,
+          "K_L1": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "M=128, N=256, K=128, block_M=128, block_N=256, K_L1=64, dtype=float16",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 35.31,
+      "runner_duration_s": 27.306699665030465,
+      "status": "PASS",
+      "sim_model_run_ms": 19434.3,
+      "sim_core_duration_us": 3.61,
+      "sim_core_running_us": 3.6,
+      "sim_model_run_ms_all": [
+        19434.3
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 3.61,
+          "running_us": 3.6
+        }
+      ]
+    },
+    {
+      "id": "ex_0052",
+      "rel_path": "gemm/example_gemm_infer_scope.py",
+      "run_path": "gemm/example_gemm_infer_scope.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256",
+        "--k",
+        "128"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "K": 128,
+          "block_M": 128,
+          "block_N": 256,
+          "K_L1": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "M=128, N=256, K=128, block_M=128, block_N=256, K_L1=64, dtype=float16",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 35.27,
+      "runner_duration_s": 26.817997378995642,
+      "status": "PASS",
+      "sim_model_run_ms": 19128.9,
+      "sim_core_duration_us": 3.68,
+      "sim_core_running_us": 3.68,
+      "sim_model_run_ms_all": [
+        19128.9
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 3.68,
+          "running_us": 3.68
+        }
+      ]
+    },
+    {
+      "id": "ex_0055",
+      "rel_path": "gemm/example_gemm_persistent.py",
+      "run_path": "gemm/example_gemm_persistent.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256",
+        "--k",
+        "128"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "K": 128,
+          "block_M": 128,
+          "block_N": 256,
+          "K_L1": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "M=128, N=256, K=128, block_M=128, block_N=256, K_L1=64, dtype=float16",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 35.19,
+      "runner_duration_s": 26.892362240003422,
+      "status": "PASS",
+      "sim_model_run_ms": 19242.6,
+      "sim_core_duration_us": 3.61,
+      "sim_core_running_us": 3.6,
+      "sim_model_run_ms_all": [
+        19242.6
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 3.61,
+          "running_us": 3.6
+        }
+      ]
+    },
+    {
+      "id": "ex_0056",
+      "rel_path": "gemm/example_gemm_pto_developer.py",
+      "run_path": "gemm/example_gemm_pto_developer.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256",
+        "--k",
+        "128"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "K": 128,
+          "block_M": 128,
+          "block_N": 256,
+          "K_L1": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "M=128, N=256, K=128, block_M=128, block_N=256, K_L1=64, dtype=float16",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 35.32,
+      "runner_duration_s": 26.71300989598967,
+      "status": "PASS",
+      "sim_model_run_ms": 19089.6,
+      "sim_core_duration_us": 3.68,
+      "sim_core_running_us": 3.68,
+      "sim_model_run_ms_all": [
+        19089.6
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 3.68,
+          "running_us": 3.68
+        }
+      ]
+    },
+    {
+      "id": "ex_0057",
+      "rel_path": "gemm/example_gemm_tail_block_developer.py",
+      "run_path": "gemm/example_gemm_tail_block_developer.py",
+      "cli_args": [],
+      "input_shapes": [
+        {
+          "M": 126,
+          "N": 80,
+          "K": 159,
+          "block_M": 32,
+          "block_N": 32,
+          "K_L1": 32,
+          "dtype": "float16"
+        },
+        {
+          "M": 557,
+          "N": 512,
+          "K": 539,
+          "block_M": 64,
+          "block_N": 64,
+          "K_L1": 64,
+          "dtype": "float16"
+        },
+        {
+          "M": 512,
+          "N": 611,
+          "K": 512,
+          "block_M": 128,
+          "block_N": 128,
+          "K_L1": 128,
+          "dtype": "float16"
+        },
+        {
+          "M": 1142,
+          "N": 1230,
+          "K": 1079,
+          "block_M": 128,
+          "block_N": 256,
+          "K_L1": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "case1: M=126, N=80, K=159, block_M=32, block_N=32, K_L1=32, dtype=float16; case2: M=557, N=512, K=539, block_M=64, block_N=64, K_L1=64, dtype=float16; case3: M=512, N=611, K=512, block_M=128, block_N=128, K_L1=128, dtype=float16; case4: M=1142, N=1230, K=1079, block_M=128, block_N=256, K_L1=64, dtype=float16; (Hardcoded test_configs in script (manifest CLI args ignored))",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 689.97,
+      "runner_duration_s": 680.7963974140584,
+      "status": "PASS",
+      "sim_model_run_ms": 673155.0,
+      "sim_core_duration_us": 2.6,
+      "sim_core_running_us": 2.34,
+      "sim_model_run_ms_all": [
+        673155.0
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 2.54,
+          "running_us": 2.28
+        },
+        {
+          "name": "core1.cubecore0",
+          "duration_us": 2.54,
+          "running_us": 2.26
+        },
+        {
+          "name": "core10.cubecore0",
+          "duration_us": 2.59,
+          "running_us": 2.31
+        },
+        {
+          "name": "core11.cubecore0",
+          "duration_us": 2.55,
+          "running_us": 2.28
+        },
+        {
+          "name": "core2.cubecore0",
+          "duration_us": 2.56,
+          "running_us": 2.32
+        },
+        {
+          "name": "core3.cubecore0",
+          "duration_us": 2.59,
+          "running_us": 2.32
+        },
+        {
+          "name": "core4.cubecore0",
+          "duration_us": 2.59,
+          "running_us": 2.31
+        },
+        {
+          "name": "core5.cubecore0",
+          "duration_us": 2.56,
+          "running_us": 2.32
+        },
+        {
+          "name": "core6.cubecore0",
+          "duration_us": 2.57,
+          "running_us": 2.31
+        },
+        {
+          "name": "core7.cubecore0",
+          "duration_us": 2.6,
+          "running_us": 2.32
+        },
+        {
+          "name": "core8.cubecore0",
+          "duration_us": 2.59,
+          "running_us": 2.32
+        },
+        {
+          "name": "core9.cubecore0",
+          "duration_us": 2.59,
+          "running_us": 2.34
+        }
+      ]
+    },
+    {
+      "id": "ex_0096",
+      "rel_path": "pipeline/matmul_add_pipeline.py",
+      "run_path": "pipeline/matmul_add_pipeline.py",
+      "cli_args": [
+        "--m",
+        "128",
+        "--n",
+        "256",
+        "--k",
+        "128"
+      ],
+      "input_shapes": [
+        {
+          "M": 128,
+          "N": 256,
+          "K": 128,
+          "block_M": 128,
+          "block_N": 256,
+          "block_K": 64,
+          "dtype": "float16"
+        }
+      ],
+      "shape_summary": "M=128, N=256, K=128, block_M=128, block_N=256, block_K=64, dtype=float16",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 48.64,
+      "runner_duration_s": 41.02658819104545,
+      "status": "PASS",
+      "sim_model_run_ms": 33344.6,
+      "sim_core_duration_us": 9.92,
+      "sim_core_running_us": 9.9,
+      "sim_model_run_ms_all": [
+        33344.6
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 3.75,
+          "running_us": 3.69
+        },
+        {
+          "name": "core0.veccore0",
+          "duration_us": 9.36,
+          "running_us": 9.34
+        },
+        {
+          "name": "core0.veccore1",
+          "duration_us": 9.92,
+          "running_us": 9.9
+        }
+      ]
+    },
+    {
+      "id": "ex_0106",
+      "rel_path": "quant_batch_matmul/example_quant_batch_matmul.py",
+      "run_path": "quant_batch_matmul/example_quant_batch_matmul.py",
+      "cli_args": [
+        "--m",
+        "64",
+        "--n",
+        "64",
+        "--k",
+        "64"
+      ],
+      "input_shapes": [
+        {
+          "Batch": 8,
+          "M": 64,
+          "N": 64,
+          "K": 64,
+          "block_M": 128,
+          "block_N": 256,
+          "block_K": 64,
+          "scale_size": "1",
+          "in_dtype": "int8",
+          "out_dtype": "float16"
+        },
+        {
+          "Batch": 8,
+          "M": 64,
+          "N": 64,
+          "K": 64,
+          "block_M": 128,
+          "block_N": 256,
+          "block_K": 64,
+          "scale_size": "N",
+          "in_dtype": "int8",
+          "out_dtype": "bfloat16"
+        }
+      ],
+      "shape_summary": "case1: Batch=8, M=64, N=64, K=64, block_M=128, block_N=256, block_K=64; case2: Batch=8, M=64, N=64, K=64, block_M=128, block_N=256, block_K=64; (Batch defaults to 8 (--b not overridden in manifest))",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 260.72,
+      "runner_duration_s": 251.78729350189678,
+      "status": "PASS",
+      "sim_model_run_ms": 244095.0,
+      "sim_core_duration_us": 5.32,
+      "sim_core_running_us": 5.32,
+      "sim_model_run_ms_all": [
+        244095.0
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 0.29,
+          "running_us": 0.22
+        },
+        {
+          "name": "core0.veccore0",
+          "duration_us": 5.22,
+          "running_us": 5.22
+        },
+        {
+          "name": "core0.veccore1",
+          "duration_us": 4.04,
+          "running_us": 4.03
+        },
+        {
+          "name": "core1.cubecore0",
+          "duration_us": 0.32,
+          "running_us": 0.27
+        },
+        {
+          "name": "core1.veccore0",
+          "duration_us": 5.26,
+          "running_us": 5.26
+        },
+        {
+          "name": "core1.veccore1",
+          "duration_us": 4.17,
+          "running_us": 4.16
+        },
+        {
+          "name": "core2.cubecore0",
+          "duration_us": 0.31,
+          "running_us": 0.25
+        },
+        {
+          "name": "core2.veccore0",
+          "duration_us": 5.26,
+          "running_us": 5.25
+        },
+        {
+          "name": "core2.veccore1",
+          "duration_us": 4.07,
+          "running_us": 4.07
+        },
+        {
+          "name": "core3.cubecore0",
+          "duration_us": 0.32,
+          "running_us": 0.23
+        },
+        {
+          "name": "core3.veccore0",
+          "duration_us": 5.24,
+          "running_us": 5.23
+        },
+        {
+          "name": "core3.veccore1",
+          "duration_us": 4.1,
+          "running_us": 4.1
+        },
+        {
+          "name": "core4.cubecore0",
+          "duration_us": 0.31,
+          "running_us": 0.29
+        },
+        {
+          "name": "core4.veccore0",
+          "duration_us": 5.32,
+          "running_us": 5.32
+        },
+        {
+          "name": "core4.veccore1",
+          "duration_us": 4.11,
+          "running_us": 4.11
+        },
+        {
+          "name": "core5.cubecore0",
+          "duration_us": 0.32,
+          "running_us": 0.24
+        },
+        {
+          "name": "core5.veccore0",
+          "duration_us": 5.31,
+          "running_us": 5.31
+        },
+        {
+          "name": "core5.veccore1",
+          "duration_us": 4.03,
+          "running_us": 4.03
+        },
+        {
+          "name": "core6.cubecore0",
+          "duration_us": 0.32,
+          "running_us": 0.3
+        },
+        {
+          "name": "core6.veccore0",
+          "duration_us": 5.28,
+          "running_us": 5.27
+        },
+        {
+          "name": "core6.veccore1",
+          "duration_us": 4.1,
+          "running_us": 4.09
+        },
+        {
+          "name": "core7.cubecore0",
+          "duration_us": 0.31,
+          "running_us": 0.23
+        },
+        {
+          "name": "core7.veccore0",
+          "duration_us": 5.18,
+          "running_us": 5.18
+        },
+        {
+          "name": "core7.veccore1",
+          "duration_us": 4.05,
+          "running_us": 4.05
+        }
+      ]
+    },
+    {
+      "id": "ex_0107",
+      "rel_path": "quant_batch_matmul/example_quant_matmul.py",
+      "run_path": "quant_batch_matmul/example_quant_matmul.py",
+      "cli_args": [
+        "--m",
+        "64",
+        "--n",
+        "64",
+        "--k",
+        "64"
+      ],
+      "input_shapes": [
+        {
+          "M": 64,
+          "N": 64,
+          "K": 64,
+          "block_M": 128,
+          "block_N": 256,
+          "block_K": 64,
+          "scale_size": "1",
+          "out_dtype": "bfloat16",
+          "in_dtype": "int8"
+        },
+        {
+          "M": 64,
+          "N": 64,
+          "K": 64,
+          "block_M": 128,
+          "block_N": 256,
+          "block_K": 64,
+          "scale_size": "N",
+          "out_dtype": "float16",
+          "in_dtype": "int8"
+        }
+      ],
+      "shape_summary": "case1: M=64, N=64, K=64, block_M=128, block_N=256, block_K=64; case2: M=64, N=64, K=64, block_M=128, block_N=256, block_K=64",
+      "soc_version": "Ascend950PR_9599",
+      "target": "pto",
+      "platform": "A5",
+      "wall_time_s": 78.55,
+      "runner_duration_s": 71.16953721293248,
+      "status": "PASS",
+      "sim_model_run_ms": 63487.2,
+      "sim_core_duration_us": 5.32,
+      "sim_core_running_us": 5.32,
+      "sim_model_run_ms_all": [
+        63487.2
+      ],
+      "sim_cores": [
+        {
+          "name": "core0.cubecore0",
+          "duration_us": 0.54,
+          "running_us": 0.54
+        },
+        {
+          "name": "core0.veccore0",
+          "duration_us": 5.32,
+          "running_us": 5.32
+        },
+        {
+          "name": "core0.veccore1",
+          "duration_us": 4.15,
+          "running_us": 4.15
+        }
+      ]
+    }
+  ]
+}

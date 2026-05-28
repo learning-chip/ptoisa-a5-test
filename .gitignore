@@ -14,3 +14,12 @@ profile_*.toml
 
 # msprof op simulator output (tests/torch_sim/run_smoke.sh)
 **/msprof_res/
+
+# TileLang A5 sim harness runtime artifacts
+tilelang_sim/results/msprof/
+tilelang_sim/results/logs/
+tilelang_sim/results/pass_timings/
+tilelang_sim/results/*.log
+tilelang_sim/autotuner.log
+tilelang_extracted_sim/build/
+tilelang_extracted_sim/outputs/

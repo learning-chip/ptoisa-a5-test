@@ -1,0 +1,71 @@
+{
+  "activation/tanh.py": {
+    "run_path": "wrappers/tanh_small.py",
+    "cli_args": [],
+    "cases": [
+      {"M": 64, "N": 64, "block_M": 64, "block_N": 64, "dtype": "float32", "elements": 4096},
+      {"M": 128, "N": 128, "block_M": 64, "block_N": 64, "dtype": "float32", "elements": 16384}
+    ]
+  },
+  "developer_mode/gemm_developer.py": {
+    "cli_args": ["--m", "128", "--n", "256", "--k", "128"],
+    "cases": [{"M": 128, "N": 256, "K": 128, "block_M": 128, "block_N": 256, "K_L1": 64, "dtype": "float16"}]
+  },
+  "developer_mode/matmul_add_developer.py": {
+    "cli_args": ["--m", "128", "--n", "256", "--k", "128"],
+    "cases": [{"M": 128, "N": 256, "K": 128, "block_M": 128, "block_N": 256, "block_K": 64, "dtype": "float16"}]
+  },
+  "elementwise/elementwise_add.py": {
+    "cli_args": ["--m", "128", "--n", "256"],
+    "cases": [{"M": 128, "N": 256, "block_M": 128, "block_N": 256, "dtype": "float32", "elements": 32768}]
+  },
+  "elementwise/elementwise_add_pipeline.py": {
+    "cli_args": ["--m", "128", "--n", "256"],
+    "cases": [{"M": 128, "N": 256, "block_M": 128, "block_N": 256, "dtype": "float32", "elements": 32768}]
+  },
+  "gemm/example_gemm.py": {
+    "cli_args": ["--m", "128", "--n", "256", "--k", "128"],
+    "cases": [{"M": 128, "N": 256, "K": 128, "block_M": 128, "block_N": 256, "K_L1": 64, "dtype": "float16"}]
+  },
+  "gemm/example_gemm_infer_scope.py": {
+    "cli_args": ["--m", "128", "--n", "256", "--k", "128"],
+    "cases": [{"M": 128, "N": 256, "K": 128, "block_M": 128, "block_N": 256, "K_L1": 64, "dtype": "float16"}]
+  },
+  "gemm/example_gemm_persistent.py": {
+    "cli_args": ["--m", "128", "--n", "256", "--k", "128"],
+    "cases": [{"M": 128, "N": 256, "K": 128, "block_M": 128, "block_N": 256, "K_L1": 64, "dtype": "float16"}]
+  },
+  "gemm/example_gemm_pto_developer.py": {
+    "cli_args": ["--m", "128", "--n", "256", "--k", "128"],
+    "cases": [{"M": 128, "N": 256, "K": 128, "block_M": 128, "block_N": 256, "K_L1": 64, "dtype": "float16"}]
+  },
+  "gemm/example_gemm_tail_block_developer.py": {
+    "cli_args": [],
+    "note": "Hardcoded test_configs in script (manifest CLI args ignored)",
+    "cases": [
+      {"M": 126, "N": 80, "K": 159, "block_M": 32, "block_N": 32, "K_L1": 32, "dtype": "float16"},
+      {"M": 557, "N": 512, "K": 539, "block_M": 64, "block_N": 64, "K_L1": 64, "dtype": "float16"},
+      {"M": 512, "N": 611, "K": 512, "block_M": 128, "block_N": 128, "K_L1": 128, "dtype": "float16"},
+      {"M": 1142, "N": 1230, "K": 1079, "block_M": 128, "block_N": 256, "K_L1": 64, "dtype": "float16"}
+    ]
+  },
+  "pipeline/matmul_add_pipeline.py": {
+    "cli_args": ["--m", "128", "--n", "256", "--k", "128"],
+    "cases": [{"M": 128, "N": 256, "K": 128, "block_M": 128, "block_N": 256, "block_K": 64, "dtype": "float16"}]
+  },
+  "quant_batch_matmul/example_quant_batch_matmul.py": {
+    "cli_args": ["--m", "64", "--n", "64", "--k", "64"],
+    "cases": [
+      {"Batch": 8, "M": 64, "N": 64, "K": 64, "block_M": 128, "block_N": 256, "block_K": 64, "scale_size": "1", "in_dtype": "int8", "out_dtype": "float16"},
+      {"Batch": 8, "M": 64, "N": 64, "K": 64, "block_M": 128, "block_N": 256, "block_K": 64, "scale_size": "N", "in_dtype": "int8", "out_dtype": "bfloat16"}
+    ],
+    "note": "Batch defaults to 8 (--b not overridden in manifest)"
+  },
+  "quant_batch_matmul/example_quant_matmul.py": {
+    "cli_args": ["--m", "64", "--n", "64", "--k", "64"],
+    "cases": [
+      {"M": 64, "N": 64, "K": 64, "block_M": 128, "block_N": 256, "block_K": 64, "scale_size": "1", "out_dtype": "bfloat16", "in_dtype": "int8"},
+      {"M": 64, "N": 64, "K": 64, "block_M": 128, "block_N": 256, "block_K": 64, "scale_size": "N", "out_dtype": "float16", "in_dtype": "int8"}
+    ]
+  }
+}

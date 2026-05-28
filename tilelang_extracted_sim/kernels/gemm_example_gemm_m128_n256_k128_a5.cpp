@@ -1,0 +1,45 @@
+#define PTO_PLATFORM_A5
+#include "tl_templates/pto/common.h"
+#include <pto/pto-inst.hpp>
+#include "acl/acl.h"
+#include <runtime/rt_ffts.h>
+using namespace pto;
+
+AICORE void main_kernel(__gm__ half *A_handle, __gm__ half *B_handle, __gm__ half *C_handle, uint64_t ffts_Addr) {
+  auto cid = get_block_idx();
+  set_ffts_base_addr(ffts_Addr);
+
+  TileAcc<float, 128, 256, 128, 256> C_L0;
+  TASSIGN(C_L0, 0);
+  tl::ascend_pto::TileMatL1<half, 128, 64, 128, 64> A_L1;
+  TASSIGN(A_L1, 0);
+  tl::ascend_pto::TileMatL1<half, 64, 256, 64, 256> B_L1;
+  TASSIGN(B_L1, 16384);
+#if defined(__DAV_C310_CUBE__)
+
+  for (int32_t k = 0; k < 2; ++k) {
+      tl::ascend_pto::copy_gm_to_l1<half, half, 1, 1, 1, 128, 64, 1, 1, 16384, 128, 1, 128, 64>(A_handle + (k * 64), 0, 0, 128, 64);
+      tl::ascend_pto::copy_gm_to_l1<half, half, 1, 1, 1, 64, 256, 1, 1, 32768, 256, 1, 64, 256>(B_handle + (k * 16384), 16384, 0, 64, 256);
+      pipe_barrier(PIPE_ALL);
+      tl::ascend_pto::gemm_v0<half, float, 128, 256, 64, 128, 256, 64, 64, false, false>(A_L1, B_L1, C_L0, (k == 0));
+      pipe_barrier(PIPE_ALL);
+    }
+    tl::ascend_pto::copy_l0c_to_gm<half, float, 1, 1, 1, 128, 256, 1, 1, 32768, 256, 1, 128, 256>(C_handle + 0, 0, 0, 128, 256);
+#endif
+}
+
+extern "C" __global__ AICORE void launch_kernel(__gm__ uint8_t *A_handle, __gm__ uint8_t *B_handle, __gm__ uint8_t *C_handle, uint64_t fftsAddr)
+{
+    main_kernel(reinterpret_cast<__gm__ half *>(A_handle),
+     reinterpret_cast<__gm__ half *>(B_handle),
+     reinterpret_cast<__gm__ half *>(C_handle),
+     reinterpret_cast<uint64_t>(fftsAddr));
+}
+
+extern "C" void call(uint8_t *A_handle, uint8_t *B_handle, uint8_t *C_handle, void *stream)
+{
+    uint32_t fftsLen{0};
+    uint64_t fftsAddr{0};
+    rtGetC2cCtrlAddr(&fftsAddr, &fftsLen);
+    launch_kernel<<<1, nullptr, stream>>>(A_handle, B_handle, C_handle, fftsAddr);
+}

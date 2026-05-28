@@ -1,0 +1,1157 @@
+{
+  "generated_at": "2026-05-28T03:35:30.473355+00:00",
+  "total": 127,
+  "counts": {
+    "SKIP": 12,
+    "FAIL_CRASH": 86,
+    "FAIL_COMPILE": 6,
+    "FAIL_TIMEOUT": 5,
+    "PASS": 13,
+    "FAIL_ACCURACY": 5
+  },
+  "rows": [
+    {
+      "id": "ex_0000",
+      "rel_path": "[bench_sfa] sparse_flash_attn_pa",
+      "category": "benchmark",
+      "skip_reason": "bench_sfa performance harness, not correctness smoke",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "bench_sfa performance harness, not correctness smoke"
+    },
+    {
+      "id": "ex_0001",
+      "rel_path": "[bench_sfa] sparse_flash_attn_pa_baseline",
+      "category": "benchmark",
+      "skip_reason": "bench_sfa performance harness, not correctness smoke",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "bench_sfa performance harness, not correctness smoke"
+    },
+    {
+      "id": "ex_0002",
+      "rel_path": "[bench_sfa] sparse_flash_attn_pa_developer",
+      "category": "benchmark",
+      "skip_reason": "bench_sfa performance harness, not correctness smoke",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "bench_sfa performance harness, not correctness smoke"
+    },
+    {
+      "id": "ex_0003",
+      "rel_path": "[bench_sfa] sparse_flash_attn_pa_no_cv_pipeline",
+      "category": "benchmark",
+      "skip_reason": "bench_sfa performance harness, not correctness smoke",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "bench_sfa performance harness, not correctness smoke"
+    },
+    {
+      "id": "ex_0004",
+      "rel_path": "aclgraph/rms_rope_aclgraph.py",
+      "category": "normalization",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.76,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0005",
+      "rel_path": "activation/gelu_grad.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 157.26,
+      "notes": "RuntimeError: operator():../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:3600 NPU function error: device error type 0, error code is 561000"
+    },
+    {
+      "id": "ex_0006",
+      "rel_path": "activation/gelu_mul.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_COMPILE",
+      "duration_s": 10.14,
+      "notes": "RuntimeError: Compilation Failed! ['bisheng', '--cce-aicore-arch=dav-c310', '-DREGISTER_BASE', '-O2', '-std=gnu++17', '-xcce', '-mllvm', '-cce-aicore-stack-size=0x8000', '-mllvm', '-cce-aicore-function-stack-size=0x8000', '-mllvm', '-cce-aicore-record-overflow=true', '-mllvm', '-cce-aicore-addr-transform', '-mllvm', '-cce-aicore-dcci-insert-for-scalar=false', '-DL2_CACHE_HINT', '-I../../src/', '-I/sources/tilelang-ascend/3rdparty/pto-isa/include', '-I/usr/local/Ascend/cann-9.0.0/include', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/msprof', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/runtime', '-I/usr/local/Ascend/driver/kernel/inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/runtime', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/profiling', '-L/usr/local/Ascend/cann-9.0.0/lib64', '-I/sources/tilelang-ascend/tilelang/../src', '-Wno-macro-redefined', '-Wno-ignored-attributes', '-lruntime', '-lstdc++', '-lascendcl', '-lm', '-ltiling_api', '-lplatform', '-lc_sec', '-ldl', '-fPIC', '--shared', '/tmp/tmp86zyk89u.cpp', '-o', '/tmp/tmp86zyk89u.so']"
+    },
+    {
+      "id": "ex_0007",
+      "rel_path": "activation/sigmoid.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 49.38,
+      "notes": "RuntimeError: sigmoid:../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:2918 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0008",
+      "rel_path": "activation/sigmoidv2.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 15.92,
+      "notes": "RuntimeError: sigmoid:../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:2918 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0009",
+      "rel_path": "activation/sigmoidv2_slice.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 17.16,
+      "notes": "RuntimeError: sigmoid:../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:2918 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0010",
+      "rel_path": "activation/silu.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 49.51,
+      "notes": "RuntimeError: sigmoid:../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:2918 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0011",
+      "rel_path": "activation/swi_glu.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 37.68,
+      "notes": "RuntimeError: silu:../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:3006 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0012",
+      "rel_path": "activation/swi_glu_grad.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_TIMEOUT",
+      "duration_s": 1800.0,
+      "notes": "msprof 30-minute timeout or simulator abort (status 139/134)"
+    },
+    {
+      "id": "ex_0013",
+      "rel_path": "activation/swi_glu_v2.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "FAIL_TIMEOUT",
+      "duration_s": 1800.0,
+      "notes": "msprof 30-minute timeout or simulator abort (status 139/134)"
+    },
+    {
+      "id": "ex_0014",
+      "rel_path": "activation/tanh.py",
+      "category": "activation",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 40.15,
+      "notes": ""
+    },
+    {
+      "id": "ex_0015",
+      "rel_path": "autotune/example_gemm_autotune.py",
+      "category": "default",
+      "skip_reason": "autotune search exceeds sim time budget",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "autotune search exceeds sim time budget"
+    },
+    {
+      "id": "ex_0016",
+      "rel_path": "autotune/example_gemm_carver.py",
+      "category": "default",
+      "skip_reason": "autotune search exceeds sim time budget",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "autotune search exceeds sim time budget"
+    },
+    {
+      "id": "ex_0017",
+      "rel_path": "batch_gemm/batch_gemm.py",
+      "category": "batch_gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.0,
+      "notes": "tvm.error.DiagnosticError: Traceback (most recent call last):"
+    },
+    {
+      "id": "ex_0018",
+      "rel_path": "blocksparse_gemm/example_blocksparse_gemm.py",
+      "category": "blocksparse_gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 11.87,
+      "notes": "RuntimeError: gt:../third_party/op-plugin/op_plugin/ops/opapi/GtKernelNpuOpApi.cpp:42 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0019",
+      "rel_path": "causal_conv1d/causal_conv1d.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.26,
+      "notes": "RuntimeError: operator():../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561000"
+    },
+    {
+      "id": "ex_0020",
+      "rel_path": "causal_conv1d/causal_conv1d_pto.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.31,
+      "notes": "RuntimeError: operator():../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561000"
+    },
+    {
+      "id": "ex_0021",
+      "rel_path": "chunk_gated_delta_rule/chunk_gated_delta_rule.py",
+      "category": "chunk_gated_delta_rule",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.91,
+      "notes": "RuntimeError: exit code 0 without success marker"
+    },
+    {
+      "id": "ex_0022",
+      "rel_path": "chunk_gated_delta_rule/expert_chunk_gated_delta_rule.py",
+      "category": "chunk_gated_delta_rule",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.8,
+      "notes": "RuntimeError: exit code 0 without success marker"
+    },
+    {
+      "id": "ex_0023",
+      "rel_path": "convolution/example_convolution.py",
+      "category": "convolution",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 60.12,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0024",
+      "rel_path": "convolution/example_convolution_autotune.py",
+      "category": "convolution",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 174.83,
+      "notes": "RuntimeError: Auto-tuning failed: No configuration successfully compiled and passed benchmarking/validation."
+    },
+    {
+      "id": "ex_0025",
+      "rel_path": "cross_entropy_loss/example_cross_entro.py",
+      "category": "default",
+      "skip_reason": null,
+      "status": "FAIL_TIMEOUT",
+      "duration_s": 1800.0,
+      "notes": "msprof 30-minute timeout or simulator abort (status 139/134)"
+    },
+    {
+      "id": "ex_0026",
+      "rel_path": "cumsum_gdn/example_cumsum.py",
+      "category": "cumsum",
+      "skip_reason": null,
+      "status": "FAIL_COMPILE",
+      "duration_s": 10.33,
+      "notes": "RuntimeError: Compilation Failed! ['bisheng', '--cce-aicore-arch=dav-c310', '-DREGISTER_BASE', '-O2', '-std=gnu++17', '-xcce', '-mllvm', '-cce-aicore-stack-size=0x8000', '-mllvm', '-cce-aicore-function-stack-size=0x8000', '-mllvm', '-cce-aicore-record-overflow=true', '-mllvm', '-cce-aicore-addr-transform', '-mllvm', '-cce-aicore-dcci-insert-for-scalar=false', '-DL2_CACHE_HINT', '-I../../src/', '-I/sources/tilelang-ascend/3rdparty/pto-isa/include', '-I/usr/local/Ascend/cann-9.0.0/include', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/msprof', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/runtime', '-I/usr/local/Ascend/driver/kernel/inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/runtime', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/profiling', '-L/usr/local/Ascend/cann-9.0.0/lib64', '-I/sources/tilelang-ascend/tilelang/../src', '-Wno-macro-redefined', '-Wno-ignored-attributes', '-lruntime', '-lstdc++', '-lascendcl', '-lm', '-ltiling_api', '-lplatform', '-lc_sec', '-ldl', '-fPIC', '--shared', '/tmp/tmp7qo8y2ab.cpp', '-o', '/tmp/tmp7qo8y2ab.so']"
+    },
+    {
+      "id": "ex_0027",
+      "rel_path": "cumsum_kda/example_cumsum_kda.py",
+      "category": "cumsum",
+      "skip_reason": null,
+      "status": "FAIL_COMPILE",
+      "duration_s": 10.28,
+      "notes": "RuntimeError: Compilation Failed! ['bisheng', '--cce-aicore-arch=dav-c310', '-DREGISTER_BASE', '-O2', '-std=gnu++17', '-xcce', '-mllvm', '-cce-aicore-stack-size=0x8000', '-mllvm', '-cce-aicore-function-stack-size=0x8000', '-mllvm', '-cce-aicore-record-overflow=true', '-mllvm', '-cce-aicore-addr-transform', '-mllvm', '-cce-aicore-dcci-insert-for-scalar=false', '-DL2_CACHE_HINT', '-I../../src/', '-I/sources/tilelang-ascend/3rdparty/pto-isa/include', '-I/usr/local/Ascend/cann-9.0.0/include', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/msprof', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/runtime', '-I/usr/local/Ascend/driver/kernel/inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/runtime', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/profiling', '-L/usr/local/Ascend/cann-9.0.0/lib64', '-I/sources/tilelang-ascend/tilelang/../src', '-Wno-macro-redefined', '-Wno-ignored-attributes', '-lruntime', '-lstdc++', '-lascendcl', '-lm', '-ltiling_api', '-lplatform', '-lc_sec', '-ldl', '-fPIC', '--shared', '/tmp/tmpazhb_w4o.cpp', '-o', '/tmp/tmpazhb_w4o.so']"
+    },
+    {
+      "id": "ex_0028",
+      "rel_path": "deepseek_v4/act_quant.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 120.05,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0029",
+      "rel_path": "deepseek_v4/hc_split_sinkhorn.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 77.65,
+      "notes": "RuntimeError: sigmoid:../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:2918 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0030",
+      "rel_path": "deepseek_v4/int8_gemm.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.91,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0031",
+      "rel_path": "deepseek_v4/sparse_attention.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.11,
+      "notes": "RuntimeError: random_op_api_:../third_party/op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp:124 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0032",
+      "rel_path": "dequantize_gemm/example_dequant_gemm_fine_grained.py",
+      "category": "dequantize_gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 421.5,
+      "notes": "tvm.error.DiagnosticError: Traceback (most recent call last):"
+    },
+    {
+      "id": "ex_0033",
+      "rel_path": "dequantize_gemm/example_dequant_gemm_w4a8.py",
+      "category": "dequantize_gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.8,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0034",
+      "rel_path": "developer_mode/flash_attn_bshd_developer.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 131.97,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0035",
+      "rel_path": "developer_mode/gelu_mul_developer.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 47.37,
+      "notes": "RuntimeError: gelu_out:../third_party/op-plugin/op_plugin/ops/opapi/GeluOutKernelNpuOpApi.cpp:26 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0036",
+      "rel_path": "developer_mode/gemm_developer.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 26.88,
+      "notes": ""
+    },
+    {
+      "id": "ex_0037",
+      "rel_path": "developer_mode/matmul_add_developer.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 39.27,
+      "notes": ""
+    },
+    {
+      "id": "ex_0038",
+      "rel_path": "developer_mode/sparse_flash_attn_developer.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 13.22,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0039",
+      "rel_path": "developer_mode/sparse_flash_attn_developer_vid_reduce.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 13.2,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0040",
+      "rel_path": "elementwise/elementwise_add.py",
+      "category": "elementwise",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 36.59,
+      "notes": ""
+    },
+    {
+      "id": "ex_0041",
+      "rel_path": "elementwise/elementwise_add_pipeline.py",
+      "category": "elementwise",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 28.19,
+      "notes": ""
+    },
+    {
+      "id": "ex_0042",
+      "rel_path": "elementwise/setvalue_example.py",
+      "category": "elementwise",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 11.92,
+      "notes": "RuntimeError: arange_out_op_api:../third_party/op-plugin/op_plugin/ops/opapi/ArangeKernelNpuOpApi.cpp:36 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0043",
+      "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_ascendc.py",
+      "category": "flash_attention",
+      "skip_reason": "uses torch_npu.npu_fusion_attention, not TileLang JIT",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "uses torch_npu.npu_fusion_attention, not TileLang JIT"
+    },
+    {
+      "id": "ex_0044",
+      "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_auto_pipeline_h16_d128.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_ACCURACY",
+      "duration_s": 7.83,
+      "notes": "AssertionError: dim must be 128"
+    },
+    {
+      "id": "ex_0045",
+      "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_auto_pipeline_h32_d512.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 46.31,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0046",
+      "rel_path": "flash_attention/fa_opt/flash_attn_bhsd_expert_h16_d128.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_ACCURACY",
+      "duration_s": 7.75,
+      "notes": "AssertionError: dim must be 128"
+    },
+    {
+      "id": "ex_0047",
+      "rel_path": "flash_attention/flash_attn_bhsd.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 179.97,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0048",
+      "rel_path": "flash_attention/flash_attn_bhsd_cc_sync.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 166.52,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0049",
+      "rel_path": "flash_attention/paged_flash_attn_bhsd.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.93,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0050",
+      "rel_path": "fused_sigmoid_gating_delta_rule/fused_sigmoid_gating_delta_rule_varlen.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.76,
+      "notes": "RuntimeError: exit code 0 without success marker"
+    },
+    {
+      "id": "ex_0051",
+      "rel_path": "gemm/example_gemm.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 27.0,
+      "notes": ""
+    },
+    {
+      "id": "ex_0052",
+      "rel_path": "gemm/example_gemm_infer_scope.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 26.87,
+      "notes": ""
+    },
+    {
+      "id": "ex_0053",
+      "rel_path": "gemm/example_gemm_intrinsic.py",
+      "category": "gemm",
+      "skip_reason": "target=ascendc out of scope",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "target=ascendc out of scope"
+    },
+    {
+      "id": "ex_0054",
+      "rel_path": "gemm/example_gemm_intrinsic_persistent.py",
+      "category": "gemm",
+      "skip_reason": "target=ascendc out of scope",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "target=ascendc out of scope"
+    },
+    {
+      "id": "ex_0055",
+      "rel_path": "gemm/example_gemm_persistent.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 26.81,
+      "notes": ""
+    },
+    {
+      "id": "ex_0056",
+      "rel_path": "gemm/example_gemm_pto_developer.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 26.89,
+      "notes": ""
+    },
+    {
+      "id": "ex_0057",
+      "rel_path": "gemm/example_gemm_tail_block_developer.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 693.52,
+      "notes": ""
+    },
+    {
+      "id": "ex_0058",
+      "rel_path": "gemm/example_gemm_transpose_l1.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "FAIL_COMPILE",
+      "duration_s": 10.05,
+      "notes": "RuntimeError: Compilation Failed! ['bisheng', '--cce-aicore-arch=dav-c310', '-DREGISTER_BASE', '-O2', '-std=gnu++17', '-xcce', '-mllvm', '-cce-aicore-stack-size=0x8000', '-mllvm', '-cce-aicore-function-stack-size=0x8000', '-mllvm', '-cce-aicore-record-overflow=true', '-mllvm', '-cce-aicore-addr-transform', '-mllvm', '-cce-aicore-dcci-insert-for-scalar=false', '-DL2_CACHE_HINT', '-I../../src/', '-I/sources/tilelang-ascend/3rdparty/pto-isa/include', '-I/usr/local/Ascend/cann-9.0.0/include', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/msprof', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/runtime', '-I/usr/local/Ascend/driver/kernel/inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/runtime', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/profiling', '-L/usr/local/Ascend/cann-9.0.0/lib64', '-I/sources/tilelang-ascend/tilelang/../src', '-Wno-macro-redefined', '-Wno-ignored-attributes', '-lruntime', '-lstdc++', '-lascendcl', '-lm', '-ltiling_api', '-lplatform', '-lc_sec', '-ldl', '-fPIC', '--shared', '/tmp/tmph8fq3jed.cpp', '-o', '/tmp/tmph8fq3jed.so']"
+    },
+    {
+      "id": "ex_0059",
+      "rel_path": "gemm_aot/run_example_gemm_aot.sh",
+      "category": "default",
+      "skip_reason": "AOT ctypes workflow, not @tilelang.jit PTO",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "AOT ctypes workflow, not @tilelang.jit PTO"
+    },
+    {
+      "id": "ex_0060",
+      "rel_path": "gemm_splitk/example_tilelang_gemm_splitk.py",
+      "category": "gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.74,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0061",
+      "rel_path": "gemv/example_gemv_c.py",
+      "category": "gemv",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 37.43,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0062",
+      "rel_path": "gemv/example_gemv_v.py",
+      "category": "gemv",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 238.59,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0063",
+      "rel_path": "grouped_gemm/example_grouped_gemm_bwd.py",
+      "category": "grouped_gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.71,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0064",
+      "rel_path": "grouped_gemm/example_grouped_gemm_fwd.py",
+      "category": "grouped_gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.86,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0065",
+      "rel_path": "grouped_gemm/example_grouped_gemm_fwd_ptr.py",
+      "category": "grouped_gemm",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.73,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0066",
+      "rel_path": "hadamard_transform/example_hadamard_transform.py",
+      "category": "hadamard",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.71,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0067",
+      "rel_path": "lightning_indexer/example_lightning_indexer.py",
+      "category": "lightning_indexer",
+      "skip_reason": null,
+      "status": "FAIL_TIMEOUT",
+      "duration_s": 1800.0,
+      "notes": "msprof 30-minute timeout or simulator abort (status 139/134)"
+    },
+    {
+      "id": "ex_0068",
+      "rel_path": "lightning_indexer/example_lightning_indexer_dynamic_shape.py",
+      "category": "lightning_indexer",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.12,
+      "notes": "e const*)"
+    },
+    {
+      "id": "ex_0069",
+      "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_cumsum.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 279.72,
+      "notes": "RuntimeError: cumsum:../third_party/op-plugin/op_plugin/ops/opapi/CumsumKernelNpuOpApi.cpp:69 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0070",
+      "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_h.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.93,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0071",
+      "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_o.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.97,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0072",
+      "rel_path": "linear_attention_and_rnn/gdn/gdn_chunk_scaled_dot_kkt.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.97,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0073",
+      "rel_path": "linear_attention_and_rnn/gdn/gdn_solve_tril.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.96,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0074",
+      "rel_path": "linear_attention_and_rnn/gdn/gdn_wy_fast.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.91,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0075",
+      "rel_path": "linear_attention_and_rnn/gdn_full.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.02,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0076",
+      "rel_path": "linear_attention_and_rnn/linear_attention_causal.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.98,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0077",
+      "rel_path": "linear_attention_and_rnn/linear_attention_normalize.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.97,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0078",
+      "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_cumsum.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_TIMEOUT",
+      "duration_s": 1800.0,
+      "notes": "msprof 30-minute timeout or simulator abort (status 139/134)"
+    },
+    {
+      "id": "ex_0079",
+      "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_h.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.57,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0080",
+      "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_o.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.63,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0081",
+      "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_chunk_scaled_dot_kkt.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.65,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0082",
+      "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_solve_tril.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.93,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0083",
+      "rel_path": "linear_attention_and_rnn/opt_gdn/opt_gdn_wy_fast.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.54,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0084",
+      "rel_path": "linear_attention_and_rnn/opt_gdn_full.py",
+      "category": "gdn",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.89,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0085",
+      "rel_path": "moe_token_permute/moe_token_permute.py",
+      "category": "moe",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.91,
+      "notes": "RuntimeError: random_op_api_:../third_party/op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp:124 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0086",
+      "rel_path": "moe_token_permute/moe_token_permute_grad.py",
+      "category": "moe",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.94,
+      "notes": "RuntimeError: random_op_api_:../third_party/op-plugin/op_plugin/ops/opapi/RandomKernelNpuOpApi.cpp:124 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0087",
+      "rel_path": "moe_token_permute/moe_token_unpermute.py",
+      "category": "moe",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.99,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0088",
+      "rel_path": "moe_token_permute/moe_token_unpermute_grad.py",
+      "category": "moe",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.93,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0089",
+      "rel_path": "moe_token_permute/moe_token_utils.py",
+      "category": "moe",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.86,
+      "notes": "Kernel Output Match"
+    },
+    {
+      "id": "ex_0090",
+      "rel_path": "normalization/layer_norm.py",
+      "category": "normalization",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 34.32,
+      "notes": "RuntimeError: operator():../third_party/op-plugin/op_plugin/ops/opapi/LayerNormKernelNpuOpApi.cpp:98 NPU function error: device error type 0, error code is 561000"
+    },
+    {
+      "id": "ex_0091",
+      "rel_path": "normalization/rms_norm.py",
+      "category": "normalization",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 54.63,
+      "notes": "RuntimeError: pow:../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:2438 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0092",
+      "rel_path": "pad/example_broadcast.py",
+      "category": "pad",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 19.56,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0093",
+      "rel_path": "pad/example_broadcast_pipeline.py",
+      "category": "pad",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 22.09,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0094",
+      "rel_path": "pipeline/flash_attn_bshd_pipeline.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 135.18,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0095",
+      "rel_path": "pipeline/gemm_v0_pipeline.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_ACCURACY",
+      "duration_s": 26.76,
+      "notes": "AssertionError: Tensor-likes are not close!"
+    },
+    {
+      "id": "ex_0096",
+      "rel_path": "pipeline/matmul_add_pipeline.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 41.22,
+      "notes": ""
+    },
+    {
+      "id": "ex_0097",
+      "rel_path": "pipeline/sparse_flash_attn_gqa_pipeline.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 12.77,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0098",
+      "rel_path": "pipeline/sparse_flash_attn_gqa_pipeline_pto.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.22,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0099",
+      "rel_path": "pos_embedding/rms_norm.py",
+      "category": "pos_embedding",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 298.79,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0100",
+      "rel_path": "pos_embedding/rms_rope_fused.py",
+      "category": "pos_embedding",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.85,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0101",
+      "rel_path": "pos_embedding/rms_rope_fused_mask.py",
+      "category": "pos_embedding",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.83,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0102",
+      "rel_path": "pos_embedding/rope.py",
+      "category": "pos_embedding",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.82,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0103",
+      "rel_path": "pos_embedding/rope_mask.py",
+      "category": "pos_embedding",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.79,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0104",
+      "rel_path": "pos_embedding/rope_mask_bwd.py",
+      "category": "pos_embedding",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.87,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0105",
+      "rel_path": "print/elementwise_print.py",
+      "category": "elementwise",
+      "skip_reason": null,
+      "status": "FAIL_COMPILE",
+      "duration_s": 10.02,
+      "notes": "RuntimeError: Compilation Failed! ['bisheng', '--cce-aicore-arch=dav-c310', '-DREGISTER_BASE', '-O2', '-std=gnu++17', '-xcce', '-mllvm', '-cce-aicore-stack-size=0x8000', '-mllvm', '-cce-aicore-function-stack-size=0x8000', '-mllvm', '-cce-aicore-record-overflow=true', '-mllvm', '-cce-aicore-addr-transform', '-mllvm', '-cce-aicore-dcci-insert-for-scalar=false', '-DL2_CACHE_HINT', '-I../../src/', '-I/sources/tilelang-ascend/3rdparty/pto-isa/include', '-I/usr/local/Ascend/cann-9.0.0/include', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/msprof', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/runtime', '-I/usr/local/Ascend/driver/kernel/inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/runtime', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/profiling', '-L/usr/local/Ascend/cann-9.0.0/lib64', '-I/sources/tilelang-ascend/tilelang/../src', '-Wno-macro-redefined', '-Wno-ignored-attributes', '-lruntime', '-lstdc++', '-lascendcl', '-lm', '-ltiling_api', '-lplatform', '-lc_sec', '-ldl', '-fPIC', '--shared', '/tmp/tmpjv3lt2qb.cpp', '-o', '/tmp/tmpjv3lt2qb.so']"
+    },
+    {
+      "id": "ex_0106",
+      "rel_path": "quant_batch_matmul/example_quant_batch_matmul.py",
+      "category": "quant",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 252.96,
+      "notes": ""
+    },
+    {
+      "id": "ex_0107",
+      "rel_path": "quant_batch_matmul/example_quant_matmul.py",
+      "category": "quant",
+      "skip_reason": null,
+      "status": "PASS",
+      "duration_s": 71.25,
+      "notes": ""
+    },
+    {
+      "id": "ex_0108",
+      "rel_path": "random_1d/random_1d.py",
+      "category": "random_1d",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.89,
+      "notes": "SystemExit: 2"
+    },
+    {
+      "id": "ex_0109",
+      "rel_path": "reduce/example_col_reduce_max_slice_buffer.py",
+      "category": "reduce",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 16.69,
+      "notes": "RuntimeError: max:../third_party/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp:82 NPU function error: device error type 0, error code is 161001"
+    },
+    {
+      "id": "ex_0110",
+      "rel_path": "reduce/example_reduce_min.py",
+      "category": "reduce",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 22.76,
+      "notes": "RuntimeError: min:../third_party/op-plugin/op_plugin/ops/opapi/MinKernelNpuOpApi.cpp:86 NPU function error: device error type 0, error code is 161001"
+    },
+    {
+      "id": "ex_0111",
+      "rel_path": "reduce/example_reduce_min_pipeline.py",
+      "category": "reduce",
+      "skip_reason": "target=ascendc out of scope",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "target=ascendc out of scope"
+    },
+    {
+      "id": "ex_0112",
+      "rel_path": "reduce/example_row_reduce_max_slice_buffer.py",
+      "category": "reduce",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 17.29,
+      "notes": "RuntimeError: max:../third_party/op-plugin/op_plugin/ops/opapi/MaxKernelNpuOpApi.cpp:82 NPU function error: device error type 0, error code is 161001"
+    },
+    {
+      "id": "ex_0113",
+      "rel_path": "seer_attention/block_sparse_attn.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 7.92,
+      "notes": "RuntimeError: fill_:../third_party/op-plugin/op_plugin/ops/opapi/FillKernelNpuOpApi.cpp:26 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0114",
+      "rel_path": "simple_fusion/matmul_add.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_ACCURACY",
+      "duration_s": 39.43,
+      "notes": "AssertionError: Tensor-likes are not close!"
+    },
+    {
+      "id": "ex_0115",
+      "rel_path": "simple_fusion/matmul_add_infer_scope.py",
+      "category": "fusion",
+      "skip_reason": null,
+      "status": "FAIL_ACCURACY",
+      "duration_s": 39.62,
+      "notes": "AssertionError: Tensor-likes are not close!"
+    },
+    {
+      "id": "ex_0116",
+      "rel_path": "softmax/example_online_softmax.py",
+      "category": "softmax",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 65.35,
+      "notes": "RuntimeError: operator():../third_party/op-plugin/op_plugin/ops/opapi/StructKernelNpuOpApi.cpp:193 NPU function error: device error type 0, error code is 561000"
+    },
+    {
+      "id": "ex_0117",
+      "rel_path": "sort/example_merge_sort.py",
+      "category": "default",
+      "skip_reason": null,
+      "status": "FAIL_COMPILE",
+      "duration_s": 10.13,
+      "notes": "RuntimeError: Compilation Failed! ['bisheng', '--cce-aicore-arch=dav-c310', '-DREGISTER_BASE', '-O2', '-std=gnu++17', '-xcce', '-mllvm', '-cce-aicore-stack-size=0x8000', '-mllvm', '-cce-aicore-function-stack-size=0x8000', '-mllvm', '-cce-aicore-record-overflow=true', '-mllvm', '-cce-aicore-addr-transform', '-mllvm', '-cce-aicore-dcci-insert-for-scalar=false', '-DL2_CACHE_HINT', '-I../../src/', '-I/sources/tilelang-ascend/3rdparty/pto-isa/include', '-I/usr/local/Ascend/cann-9.0.0/include', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/msprof', '-I/usr/local/Ascend/cann-9.0.0/include/experiment/runtime', '-I/usr/local/Ascend/driver/kernel/inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/runtime', '-I/usr/local/Ascend/cann-9.0.0/pkg_inc/profiling', '-L/usr/local/Ascend/cann-9.0.0/lib64', '-I/sources/tilelang-ascend/tilelang/../src', '-Wno-macro-redefined', '-Wno-ignored-attributes', '-lruntime', '-lstdc++', '-lascendcl', '-lm', '-ltiling_api', '-lplatform', '-lc_sec', '-ldl', '-fPIC', '--shared', '/tmp/tmpgvm74ued.cpp', '-o', '/tmp/tmpgvm74ued.so']"
+    },
+    {
+      "id": "ex_0118",
+      "rel_path": "sparse_flash_attention/example_sparse_flash_attn.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 12.54,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0119",
+      "rel_path": "sparse_flash_attention/example_sparse_flash_attn_dynamic_shape.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 14.45,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0120",
+      "rel_path": "sparse_flash_attention/example_sparse_flash_attn_gqa.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 12.74,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0121",
+      "rel_path": "sparse_flash_attention/example_sparse_flash_attn_gqa_pto.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 8.26,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0122",
+      "rel_path": "sparse_flash_attention/example_sparse_flash_attn_gqa_pto_developer.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 12.67,
+      "notes": "RuntimeError: copy_d2d_baseformat_opapi:../torch_npu/csrc/aten/ops/op_api/CopyKernelOpApi.cpp:90 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0123",
+      "rel_path": "sparse_flash_attention/example_sparse_flash_attn_mask.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 14.56,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0124",
+      "rel_path": "sparse_flash_attention/example_sparse_flash_attn_mask_pa.py",
+      "category": "flash_attention",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 14.41,
+      "notes": "RuntimeError: randperm_op_api:../third_party/op-plugin/op_plugin/ops/opapi/RandpermKernelNpuOpApi.cpp:28 NPU function error: device error type 0, error code is 561103"
+    },
+    {
+      "id": "ex_0125",
+      "rel_path": "topk_selector/example_topk_selector.py",
+      "category": "topk",
+      "skip_reason": null,
+      "status": "FAIL_CRASH",
+      "duration_s": 316.25,
+      "notes": "RuntimeError: topk:../third_party/op-plugin/op_plugin/ops/opapi/TopKKernelNpuOpApi.cpp:69 NPU function error: device error type 0, error code is 161002"
+    },
+    {
+      "id": "ex_0126",
+      "rel_path": "torch_tl_ascend/test_example.sh",
+      "category": "default",
+      "skip_reason": "PyTorch C extension integration, not standard JIT",
+      "status": "SKIP",
+      "duration_s": 0.0,
+      "notes": "PyTorch C extension integration, not standard JIT"
+    }
+  ]
+}
